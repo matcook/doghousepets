@@ -1,0 +1,23 @@
+doghouse_pets:
+  omega:
+    allow_clone_for_subtheme: true
+    allow_enable_disable: true
+    title: "Default library for doghouse_pets."
+    description: "Default Omega subtheme library description. Please provide a more meaningful description (and title) for this library by editing the doghouse_pets.libraries.yml file."
+    scss:
+      dist/css/main.css: "src/scss/main.scss"
+  version: VERSION
+  js:
+    # Custom Javascript file for your own JS modifications.
+    # Examples of behaviors in JS file.
+    dist/js/main.bundle.js: {}
+
+  css:
+    theme:
+      # Custom CSS file to be loaded in all media circumstances
+      dist/css/main.css: {}
+  dependencies:
+#     - core/modernizr
+#     - core/jquery
+#     - core/drupal
+#     - core/drupalSettings

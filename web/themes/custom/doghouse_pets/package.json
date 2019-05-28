@@ -1,0 +1,29 @@
+{
+  "name": "doghouse_pets",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "build:report": "webpack --mode production --report"
+  },
+  "author": "Mathew Cook",
+  "license": "ISC",
+  "dependencies": {
+    "@doghouse/uikit": "^2.0.2",
+    "breakpoint-sass": "^2.7.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.4.5",
+    "@doghouse/webpack-base": "^1.0.3"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "IE 11",
+    "iOS >= 8"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  }
+}

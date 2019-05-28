@@ -24,4 +24,4 @@
 /.env
 
 /web/themes/custom/*/node_modules/
-/web/themes/custom/*/src/css/*
+/web/themes/custom/*/dist/css/*

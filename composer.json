@@ -26,6 +26,7 @@
         "drupal/ds": "^3.3",
         "drupal/omega": "^5.0@alpha",
         "drupal/page_manager": "^4.0@beta",
+        "drupal/paragraphs": "^1.8",
         "drupal/webform": "^5.2",
         "drush/drush": "^9.0.0",
         "vlucas/phpdotenv": "^2.4",

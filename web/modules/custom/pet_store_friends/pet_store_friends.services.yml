@@ -1,0 +1,4 @@
+services:
+  pet_store_friends.postHelper:
+    class: Drupal\pet_store_friends\FriendsBlog
+    arguments: ["@http_client"]

@@ -1,0 +1,4 @@
+name: Pet Store Friends
+description: fetch and display latest posts from my friends pet blog
+type: module
+core: 8.x

@@ -6,33 +6,22 @@ use GuzzleHttp\Client;
 class FriendsBlog {
 
   
-  /**
-  * The url to fetch data from.
-  * {string}
-  */
+  /** @var string The url to fetch data from. */
   protected $url = 'https://jsonplaceholder.typicode.com/posts';
 
-  /**
-  * The data from the API.
-  * {JSON}
-  */
+  /** @var string The JSON data from the API. */
   protected $data;
 
-  /**
-  * The data from the API.
-  * {array|object}
-  */
+  /** @var array|object The data from the API. */
   protected $posts;
 
-  /**
-  * The number of posts to get.
-  * {number}
-  */
+  /** @var number The number of posts to get. */
   public $numberOfPosts = 10;
 
   /**
   * The http connector.
-  * 
+  *
+  * @var \GuzzleHttp\ClientInterface
   */
   protected $httpclient;
 
@@ -41,16 +30,16 @@ class FriendsBlog {
    * 
    * @param \Guzzle\Client $httpclient
    *   The http connector.
-   * 
   */
   public function __construct(Client $http_client) {
     $this->httpclient = $http_client;
   }
 
   /**
- * Sets number of posts to be displayed
- * @return \Drupal\pet_store_friends\FriendsBlog
- */
+   * Sets number of posts to be displayed
+   * 
+   * @return \Drupal\pet_store_friends\FriendsBlog
+   */
   public function setNumberOfPosts($number) {
     $this->numberOfPosts = $number;
     return $this;
@@ -58,6 +47,7 @@ class FriendsBlog {
 
   /**
    * Fetches posts from API 
+   * 
    * @return array
    */
   public function getPosts() {

@@ -1,0 +1,125 @@
+uuid: b253df72-2c11-4786-a77c-88354ede48b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pet_image
+    - field.field.block_content.pet_image.field_first_pet_type_image
+    - field.field.block_content.pet_image.field_first_pet_type_link
+    - field.field.block_content.pet_image.field_pet_cta
+    - field.field.block_content.pet_image.field_second_pet_type_image
+    - field.field.block_content.pet_image.field_second_pet_type_link
+    - field.field.block_content.pet_image.field_see_more
+    - field.field.block_content.pet_image.field_third_pet_type_image
+    - field.field.block_content.pet_image.field_third_pet_type_link
+    - image.style.medium
+  module:
+    - entity_reference_revisions
+    - image
+    - link
+    - linked_field
+id: block_content.pet_image.default
+targetEntityType: block_content
+bundle: pet_image
+mode: default
+content:
+  field_first_pet_type_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings:
+      linked_field:
+        linked: '1'
+        type: field
+        destination: field_first_pet_type_link
+        advanced: {  }
+    type: image
+    region: content
+  field_first_pet_type_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_pet_cta:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_second_pet_type_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings:
+      linked_field:
+        linked: '1'
+        type: field
+        destination: field_second_pet_type_link
+        advanced: {  }
+    type: image
+    region: content
+  field_second_pet_type_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_see_more:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_third_pet_type_image:
+    weight: 4
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings:
+      linked_field:
+        linked: '1'
+        type: field
+        destination: field_third_pet_type_link
+        advanced: {  }
+    type: image
+    region: content
+  field_third_pet_type_link:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

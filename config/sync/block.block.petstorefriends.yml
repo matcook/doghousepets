@@ -1,0 +1,28 @@
+uuid: e92531a8-9a2e-4125-9194-35404acb425e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page
+  module:
+    - block_visibility_groups
+    - pet_store_friends
+  theme:
+    - doghouse_pets
+id: petstorefriends
+theme: doghouse_pets
+region: content
+weight: 0
+provider: null
+plugin: pet_store_friends_block
+settings:
+  id: pet_store_friends_block
+  label: 'Pet Store Friends'
+  provider: pet_store_friends
+  label_display: visible
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page
+    context_mapping: {  }

@@ -1,0 +1,21 @@
+uuid: 4d44ecd8-2a96-47b6-b0cc-e7fbbd5b31af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_care_instructions
+    - node.type.animal
+  module:
+    - text
+id: node.animal.field_care_instructions
+field_name: field_care_instructions
+entity_type: node
+bundle: animal
+label: 'Care Instructions'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

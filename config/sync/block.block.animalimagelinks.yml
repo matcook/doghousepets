@@ -1,0 +1,33 @@
+uuid: ca2ef2b7-3970-42c7-9f90-61c9d8581482
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page
+  content:
+    - 'block_content:pet_image:4e8851fa-c2ed-4614-8fc6-8421227655e2'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - doghouse_pets
+id: animalimagelinks
+theme: doghouse_pets
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:4e8851fa-c2ed-4614-8fc6-8421227655e2'
+settings:
+  id: 'block_content:4e8851fa-c2ed-4614-8fc6-8421227655e2'
+  label: 'Animal Image Links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page
+    context_mapping: {  }

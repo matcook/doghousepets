@@ -1,0 +1,18 @@
+uuid: 061fb828-f217-4cc0-8e78-a6deccc89655
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.animal
+id: node.animal.title
+field_name: title
+entity_type: node
+bundle: animal
+label: 'Animal Breed'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

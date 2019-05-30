@@ -1,0 +1,36 @@
+uuid: d982096e-57ef-4baf-ab87-f4b6e9fa7c8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pet_cta.field_pet_image
+    - field.field.paragraph.pet_cta.field_pet_page_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.pet_cta
+  module:
+    - image
+    - link
+id: paragraph.pet_cta.default
+targetEntityType: paragraph
+bundle: pet_cta
+mode: default
+content:
+  field_pet_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_pet_page_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  created: true
+  status: true

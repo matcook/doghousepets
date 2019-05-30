@@ -164,6 +164,7 @@ display:
       empty: {  }
       relationships: {  }
       arguments: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -185,6 +186,7 @@ display:
         type: normal
         title: Articles
         menu_name: main
+        weight: -48
     cache_metadata:
       max-age: -1
       contexts:

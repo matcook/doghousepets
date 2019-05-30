@@ -7,7 +7,6 @@
 namespace Drupal\pet_store_friends\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\pet_store_friends\Controller\PostController;
 
 /**
  * Provides block displaying 1 post from external API

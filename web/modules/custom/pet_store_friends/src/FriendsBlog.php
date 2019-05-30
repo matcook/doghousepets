@@ -1,6 +1,7 @@
 <?php
 
 namespace Drupal\pet_store_friends;
+use GuzzleHttp\Client;
 
 class FriendsBlog {
 
@@ -29,13 +30,25 @@ class FriendsBlog {
   */
   public $numberOfPosts = 10;
 
-  public function setNumberOfPosts($number){
+  protected $httpclient;
+
+  public function __construct(Client $httpclient) {
+    $this->httpclient = $httpclient;
+  }
+
+  /**
+   * Sets number of posts to be displayed
+   */
+  public function setNumberOfPosts($number) {
     $this->numberOfPosts = $number;
     return $this;
   }
 
+  /**
+   * Fetches posts from API and returns an array of posts
+   */
   public function getPosts() {
-    $this->data = file_get_contents($this->url);
+    $this->data = $this->httpclient->get($this->url)->getBody();
     $this->posts = json_decode($this->data);
     $this->posts = array_slice($this->posts, 0, $this->numberOfPosts);
     return $this->posts;

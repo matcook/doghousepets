@@ -1,0 +1,27 @@
+uuid: f397cf32-4669-44b4-bb89-7e3a7637bc39
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'Authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access shortcuts'
+  - 'access site-wide contact form'
+  - 'add or remove dislike votes on animal of node'
+  - 'add or remove like votes on animal of node'
+  - 'add or remove vote votes on animal of node'
+  - 'clear own vote on node:animal:field_vote'
+  - 'edit own vote on node:animal:field_vote'
+  - 'post comments'
+  - 'reset vote up/down votes'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use text format basic_html'
+  - 'use vote up/down'
+  - 'vote on node:animal:field_vote'

@@ -1,0 +1,45 @@
+uuid: ab40dec0-6df1-4faa-9623-857c07d757f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pet_cta.field_pet_image
+    - field.field.paragraph.pet_cta.field_pet_page_link
+    - image.style.medium
+    - paragraphs.paragraphs_type.pet_cta
+  module:
+    - image
+    - link
+    - linked_field
+id: paragraph.pet_cta.default
+targetEntityType: paragraph
+bundle: pet_cta
+mode: default
+content:
+  field_pet_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings:
+      linked_field:
+        linked: '1'
+        type: field
+        destination: field_pet_page_link
+        advanced: {  }
+    type: image
+    region: content
+  field_pet_page_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

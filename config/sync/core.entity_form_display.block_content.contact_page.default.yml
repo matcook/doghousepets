@@ -1,0 +1,42 @@
+uuid: bbd361ae-3977-413e-be46-61a5a24a0feb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_page
+    - field.field.block_content.contact_page.field_contact_details
+    - field.field.block_content.contact_page.field_hero_image
+    - image.style.thumbnail
+  module:
+    - image
+    - text
+id: block_content.contact_page.default
+targetEntityType: block_content
+bundle: contact_page
+mode: default
+content:
+  field_contact_details:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_hero_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,38 @@
+uuid: b253df72-2c11-4786-a77c-88354ede48b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pet_image
+    - field.field.block_content.pet_image.field_pet_cta
+    - field.field.block_content.pet_image.field_see_more
+  module:
+    - entity_reference_revisions
+    - link
+id: block_content.pet_image.default
+targetEntityType: block_content
+bundle: pet_image
+mode: default
+content:
+  field_pet_cta:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_see_more:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

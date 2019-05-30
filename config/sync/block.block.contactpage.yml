@@ -1,0 +1,33 @@
+uuid: d571d892-5749-4d8b-b39e-4d73d704ef6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.contact_page
+  content:
+    - 'block_content:contact_page:70df2d13-0b7c-4a87-bd55-d31196823f2b'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - doghouse_pets
+id: contactpage
+theme: doghouse_pets
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:70df2d13-0b7c-4a87-bd55-d31196823f2b'
+settings:
+  id: 'block_content:70df2d13-0b7c-4a87-bd55-d31196823f2b'
+  label: 'Contact Page'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: contact_page
+    context_mapping: {  }

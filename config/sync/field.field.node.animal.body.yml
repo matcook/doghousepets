@@ -1,0 +1,22 @@
+uuid: 317607eb-74d0-43c5-ae71-3070f3bd6704
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.animal
+  module:
+    - text
+id: node.animal.body
+field_name: body
+entity_type: node
+bundle: animal
+label: 'Animal Description'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

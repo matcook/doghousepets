@@ -1,0 +1,33 @@
+uuid: a1071f6b-18f5-44c4-83a0-058e21c0a959
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page
+  content:
+    - 'block_content:basic:3e17cd30-b02b-4773-a695-d9602f7ebd93'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - doghouse_pets
+id: briefsitedescription
+theme: doghouse_pets
+region: content
+weight: -5
+provider: null
+plugin: 'block_content:3e17cd30-b02b-4773-a695-d9602f7ebd93'
+settings:
+  id: 'block_content:3e17cd30-b02b-4773-a695-d9602f7ebd93'
+  label: 'Brief Site Description'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page
+    context_mapping: {  }

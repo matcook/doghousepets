@@ -1,0 +1,105 @@
+uuid: 37f14feb-ce90-4535-b79d-0c5e1a20259c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.animal.body
+    - field.field.node.animal.field_animal_type
+    - field.field.node.animal.field_care_instructions
+    - field.field.node.animal.field_category
+    - field.field.node.animal.field_image
+    - field.field.node.animal.field_pet_good_for
+    - node.type.animal
+  module:
+    - ds
+    - image
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col_stacked
+      library: ds/ds_2col_stacked
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          left: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - like_and_dislike
+      left:
+        - field_image
+      right:
+        - node_title
+        - field_animal_type
+        - body
+      footer:
+        - field_care_instructions
+        - field_pet_good_for
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+id: node.animal.default
+targetEntityType: node
+bundle: animal
+mode: default
+content:
+  body:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: right
+  field_animal_type:
+    type: string
+    weight: 3
+    region: right
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_care_instructions:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: footer
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: left
+  field_pet_good_for:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: footer
+  like_and_dislike:
+    weight: 0
+    region: header
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_category: true
+  links: true

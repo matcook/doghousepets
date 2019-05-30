@@ -1,0 +1,27 @@
+uuid: d5e1d882-65d6-4176-a8f6-b36e6f9e77fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.animals_page
+  module:
+    - block_visibility_groups
+  theme:
+    - doghouse_pets
+id: pagetitle
+theme: doghouse_pets
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: animals_page
+    context_mapping: {  }

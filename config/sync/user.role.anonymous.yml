@@ -1,0 +1,24 @@
+uuid: 98d84dd0-1ddd-42af-956e-e70171bc491e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pq_mEIu_B4widZN7Ap81iCJSjShFFdcL0jEiCi8VrDk
+id: anonymous
+label: 'Anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'add or remove dislike votes on animal of node'
+  - 'add or remove like votes on animal of node'
+  - 'add or remove vote votes on animal of node'
+  - 'clear own vote on node:animal:field_vote'
+  - 'edit own vote on node:animal:field_vote'
+  - 'reset vote up/down votes'
+  - 'search content'
+  - 'use text format restricted_html'
+  - 'use vote up/down'
+  - 'vote on node:animal:field_vote'

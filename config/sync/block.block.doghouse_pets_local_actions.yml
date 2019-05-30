@@ -1,0 +1,20 @@
+uuid: d253d95a-3d0a-4221-8752-a493c2046603
+langcode: en
+status: true
+dependencies:
+  theme:
+    - doghouse_pets
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: doghouse_pets_local_actions
+theme: doghouse_pets
+region: sidebar_first
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

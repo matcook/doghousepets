@@ -1,0 +1,33 @@
+uuid: 6bccc732-d0e7-4aff-aa4d-1596e3e6dae6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.home_page
+  content:
+    - 'block_content:hero_banner:19f4636b-3db8-4429-9c55-4ed9a693b1b3'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - doghouse_pets
+id: herobanner
+theme: doghouse_pets
+region: content
+weight: -6
+provider: null
+plugin: 'block_content:19f4636b-3db8-4429-9c55-4ed9a693b1b3'
+settings:
+  id: 'block_content:19f4636b-3db8-4429-9c55-4ed9a693b1b3'
+  label: 'Hero Banner'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: home_page
+    context_mapping: {  }

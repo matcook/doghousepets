@@ -1,0 +1,33 @@
+uuid: 1bc1305b-2774-471d-a843-0b5e679f46ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_page
+    - field.field.block_content.contact_page.field_contact_details
+    - field.field.block_content.contact_page.field_hero_image
+  module:
+    - image
+    - text
+id: block_content.contact_page.default
+targetEntityType: block_content
+bundle: contact_page
+mode: default
+content:
+  field_contact_details:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_hero_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

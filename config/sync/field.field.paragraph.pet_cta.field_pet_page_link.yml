@@ -1,0 +1,23 @@
+uuid: 1643046a-c1bf-47f5-a80e-e281aba88df1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pet_page_link
+    - paragraphs.paragraphs_type.pet_cta
+  module:
+    - link
+id: paragraph.pet_cta.field_pet_page_link
+field_name: field_pet_page_link
+entity_type: paragraph
+bundle: pet_cta
+label: 'Pet Page Link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 1
+field_type: link

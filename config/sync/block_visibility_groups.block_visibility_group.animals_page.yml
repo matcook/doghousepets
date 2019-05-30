@@ -1,0 +1,23 @@
+uuid: 4d7728b6-3109-4a0f-aeac-7ab4dbe7cf15
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: animals_page
+label: 'Animals Page'
+logic: or
+conditions:
+  e33b3fb0-fd53-4b3e-81ee-25c3f205a01e:
+    id: request_path
+    pages: '/pets/*'
+    negate: false
+    context_mapping: {  }
+    uuid: e33b3fb0-fd53-4b3e-81ee-25c3f205a01e
+  d7cd9352-a017-4b13-bda3-1750111bb3e3:
+    id: request_path
+    pages: /pets
+    negate: false
+    context_mapping: {  }
+    uuid: d7cd9352-a017-4b13-bda3-1750111bb3e3
+allow_other_conditions: false

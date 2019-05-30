@@ -1,0 +1,23 @@
+uuid: 9925288e-2767-4b6b-81c3-593d1b165ea5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pet_image
+    - field.storage.block_content.field_see_more
+  module:
+    - link
+id: block_content.pet_image.field_see_more
+field_name: field_see_more
+entity_type: block_content
+bundle: pet_image
+label: 'See More'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 1
+field_type: link

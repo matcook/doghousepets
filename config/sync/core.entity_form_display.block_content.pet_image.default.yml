@@ -1,0 +1,101 @@
+uuid: ed237c14-0643-419b-8032-dc6573fd97b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pet_image
+    - field.field.block_content.pet_image.field_first_pet_type_image
+    - field.field.block_content.pet_image.field_first_pet_type_link
+    - field.field.block_content.pet_image.field_pet_cta
+    - field.field.block_content.pet_image.field_second_pet_type_image
+    - field.field.block_content.pet_image.field_second_pet_type_link
+    - field.field.block_content.pet_image.field_see_more
+    - field.field.block_content.pet_image.field_third_pet_type_image
+    - field.field.block_content.pet_image.field_third_pet_type_link
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+    - paragraphs
+id: block_content.pet_image.default
+targetEntityType: block_content
+bundle: pet_image
+mode: default
+content:
+  field_first_pet_type_image:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_first_pet_type_link:
+    weight: 27
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_pet_cta:
+    type: entity_reference_paragraphs
+    weight: 33
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_second_pet_type_image:
+    weight: 28
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_second_pet_type_link:
+    weight: 29
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_see_more:
+    weight: 32
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_third_pet_type_image:
+    weight: 30
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_third_pet_type_link:
+    weight: 31
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

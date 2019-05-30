@@ -1,0 +1,44 @@
+uuid: a857840a-ccd6-439d-a836-89d68ef7b6de
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.animal.body
+    - field.field.node.animal.field_animal_type
+    - field.field.node.animal.field_care_instructions
+    - field.field.node.animal.field_image
+    - field.field.node.animal.field_pet_good_for
+    - image.style.medium
+    - node.type.animal
+  module:
+    - image
+    - text
+    - user
+id: node.animal.teaser
+targetEntityType: node
+bundle: animal
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  field_animal_type: true
+  field_care_instructions: true
+  field_pet_good_for: true
+  links: true

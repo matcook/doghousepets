@@ -1,0 +1,19 @@
+uuid: ed147c01-f13c-4742-a68b-00066477cf4a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_second_pet_type_link
+field_name: field_second_pet_type_link
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

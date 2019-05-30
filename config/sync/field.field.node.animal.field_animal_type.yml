@@ -1,0 +1,19 @@
+uuid: 2ba0bd69-7046-4b20-9a9d-47eddd65d274
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_animal_type
+    - node.type.animal
+id: node.animal.field_animal_type
+field_name: field_animal_type
+entity_type: node
+bundle: animal
+label: 'Animal Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

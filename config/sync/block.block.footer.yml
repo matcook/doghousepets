@@ -1,0 +1,31 @@
+uuid: 9b2b39da-91c6-49a6-980c-6215ab74d469
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer
+  module:
+    - block_visibility_groups
+    - system
+  theme:
+    - doghouse_pets
+id: footer
+theme: doghouse_pets
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer'
+settings:
+  id: 'system_menu_block:footer'
+  label: Footer
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

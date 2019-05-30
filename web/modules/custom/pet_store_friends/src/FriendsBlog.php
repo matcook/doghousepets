@@ -30,22 +30,35 @@ class FriendsBlog {
   */
   public $numberOfPosts = 10;
 
+  /**
+  * The http connector.
+  * 
+  */
   protected $httpclient;
 
-  public function __construct(Client $httpclient) {
-    $this->httpclient = $httpclient;
+  /**
+   * Setup friendsblog class.
+   * 
+   * @param \Guzzle\Client $httpclient
+   *   The http connector.
+   * 
+  */
+  public function __construct(Client $http_client) {
+    $this->httpclient = $http_client;
   }
 
   /**
-   * Sets number of posts to be displayed
-   */
+ * Sets number of posts to be displayed
+ * @return \Drupal\pet_store_friends\FriendsBlog
+ */
   public function setNumberOfPosts($number) {
     $this->numberOfPosts = $number;
     return $this;
   }
 
   /**
-   * Fetches posts from API and returns an array of posts
+   * Fetches posts from API 
+   * @return array
    */
   public function getPosts() {
     $this->data = $this->httpclient->get($this->url)->getBody();

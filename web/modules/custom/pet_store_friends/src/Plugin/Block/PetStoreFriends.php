@@ -20,10 +20,16 @@ use Drupal\pet_store_friends\Controller\PostController;
  */
 
  class PetStoreFriends extends BlockBase {
-   public function build(){
-    $post = new PostController;
-    $post->numberOfPosts(1);
-    $output = $post->getPosts();
-    return $output;
+
+  /**
+   * {@inheritdoc}
+  */
+   public function build() {
+    $helper = \Drupal::service('pet_store_friends.postHelper');
+    return [
+      '#theme' => 'post_list',
+      '#posts' => $helper->setNumberOfPosts(1)->getPosts(),
+      '#title' => 'Friends Pet Blog'
+    ];
    }
  }

@@ -56,6 +56,7 @@ class FriendsBlog {
    * 
    * @return \Drupal\pet_store_friends\FriendsBlog
    */
+  
   public function setNumberOfPosts($number) {
     $this->numberOfPosts = $number;
     return $this;

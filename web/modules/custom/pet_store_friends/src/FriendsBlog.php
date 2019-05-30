@@ -30,15 +30,25 @@ class FriendsBlog {
   */
   public $numberOfPosts = 10;
 
+  /**
+  * The http connector.
+  * 
+  */
   protected $httpclient;
-
-  public function __construct(Client $httpclient) {
-    $this->httpclient = $httpclient;
+  /**
+   * Setup friendsblog class.
+   * 
+   * @param \Guzzle\Client $httpclient
+   *   The http connector.
+  */
+  public function __construct(Client $http_client) {
+    $this->httpclient = $http_client;
   }
 
   /**
    * Sets number of posts to be displayed
    */
+  
   public function setNumberOfPosts($number) {
     $this->numberOfPosts = $number;
     return $this;

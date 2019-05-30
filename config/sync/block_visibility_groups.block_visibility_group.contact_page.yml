@@ -1,0 +1,17 @@
+uuid: 8e232bef-c18d-4976-a84e-8b3b7dee97e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: contact_page
+label: 'Contact Page'
+logic: and
+conditions:
+  a8428497-6bc0-4c26-89aa-8282f96e7443:
+    id: request_path
+    pages: /contact
+    negate: false
+    context_mapping: {  }
+    uuid: a8428497-6bc0-4c26-89aa-8282f96e7443
+allow_other_conditions: false

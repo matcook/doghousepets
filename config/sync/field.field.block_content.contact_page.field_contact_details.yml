@@ -1,0 +1,21 @@
+uuid: 7cd8ad15-988a-4239-bd4b-5d78ed6bba8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_page
+    - field.storage.block_content.field_contact_details
+  module:
+    - text
+id: block_content.contact_page.field_contact_details
+field_name: field_contact_details
+entity_type: block_content
+bundle: contact_page
+label: 'Contact Details'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

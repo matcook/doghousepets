@@ -1,25 +1,25 @@
-uuid: ca2ef2b7-3970-42c7-9f90-61c9d8581482
+uuid: b8926e3a-473e-4ec4-bfef-0fe4f6b3da6a
 langcode: en
 status: true
 dependencies:
   config:
     - block_visibility_groups.block_visibility_group.home_page
   content:
-    - 'block_content:pet_image:4e8851fa-c2ed-4614-8fc6-8421227655e2'
+    - 'block_content:pet_image:7242f08a-ee4e-466b-a7bd-284b7b4e7964'
   module:
     - block_content
     - block_visibility_groups
   theme:
     - doghouse_pets
-id: animalimagelinks
+id: petctas
 theme: doghouse_pets
 region: content
-weight: -3
+weight: -4
 provider: null
-plugin: 'block_content:4e8851fa-c2ed-4614-8fc6-8421227655e2'
+plugin: 'block_content:7242f08a-ee4e-466b-a7bd-284b7b4e7964'
 settings:
-  id: 'block_content:4e8851fa-c2ed-4614-8fc6-8421227655e2'
-  label: 'Animal Image Links'
+  id: 'block_content:7242f08a-ee4e-466b-a7bd-284b7b4e7964'
+  label: 'Pet CTAs'
   provider: block_content
   label_display: '0'
   status: true

@@ -35,21 +35,30 @@ third_party_settings:
         classes:
           layout_class: {  }
     regions:
+      header:
+        - like_and_dislike
       left:
         - field_image
       right:
+        - node_title
         - field_animal_type
         - body
       footer:
         - field_care_instructions
         - field_pet_good_for
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
 id: node.animal.default
 targetEntityType: node
 bundle: animal
 mode: default
 content:
   body:
-    weight: 2
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -57,21 +66,21 @@ content:
     region: right
   field_animal_type:
     type: string
-    weight: 1
+    weight: 3
     region: right
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
   field_care_instructions:
-    weight: 3
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: footer
   field_image:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       image_style: ''
@@ -80,12 +89,17 @@ content:
     type: image
     region: left
   field_pet_good_for:
-    weight: 4
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: footer
+  like_and_dislike:
+    weight: 0
+    region: header
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_category: true
   links: true

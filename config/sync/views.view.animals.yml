@@ -391,6 +391,7 @@ display:
         type: normal
         title: Pets
         menu_name: main
+        weight: -49
       exposed_block: true
     cache_metadata:
       max-age: -1

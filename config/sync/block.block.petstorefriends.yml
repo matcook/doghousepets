@@ -12,14 +12,14 @@ dependencies:
 id: petstorefriends
 theme: doghouse_pets
 region: content
-weight: 0
+weight: -2
 provider: null
 plugin: pet_store_friends_block
 settings:
   id: pet_store_friends_block
   label: 'Pet Store Friends'
   provider: pet_store_friends
-  label_display: visible
+  label_display: '0'
 visibility:
   condition_group:
     id: condition_group

@@ -1,20 +1,20 @@
-uuid: 9434a5f9-22c6-477d-aded-6c68d9c38b84
+uuid: 54448d7e-a4f4-48b1-9b53-57fc06572eae
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.pet_image
-    - field.storage.block_content.field_second_pet_type_image
+    - block_content.type.contact_page
+    - field.storage.block_content.field_hero_image
   module:
     - image
-id: block_content.pet_image.field_second_pet_type_image
-field_name: field_second_pet_type_image
+id: block_content.contact_page.field_hero_image
+field_name: field_hero_image
 entity_type: block_content
-bundle: pet_image
-label: 'Second Pet Type Image'
+bundle: contact_page
+label: 'Banner image'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

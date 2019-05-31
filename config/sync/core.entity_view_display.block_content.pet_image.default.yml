@@ -5,6 +5,8 @@ dependencies:
   config:
     - block_content.type.pet_image
     - field.field.block_content.pet_image.field_pet_cta
+    - field.field.block_content.pet_image.field_pet_cta_2
+    - field.field.block_content.pet_image.field_pet_cta_3
     - field.field.block_content.pet_image.field_see_more
   module:
     - entity_reference_revisions
@@ -17,14 +19,32 @@ content:
   field_pet_cta:
     type: entity_reference_revisions_entity_view
     weight: 0
-    label: above
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_pet_cta_2:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_pet_cta_3:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
     region: content
   field_see_more:
-    weight: 1
+    weight: 3
     label: hidden
     settings:
       trim_length: 80

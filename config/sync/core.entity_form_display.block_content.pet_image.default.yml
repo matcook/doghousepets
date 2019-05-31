@@ -5,6 +5,8 @@ dependencies:
   config:
     - block_content.type.pet_image
     - field.field.block_content.pet_image.field_pet_cta
+    - field.field.block_content.pet_image.field_pet_cta_2
+    - field.field.block_content.pet_image.field_pet_cta_3
     - field.field.block_content.pet_image.field_see_more
   module:
     - link
@@ -17,6 +19,30 @@ content:
   field_pet_cta:
     type: entity_reference_paragraphs
     weight: 33
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_pet_cta_2:
+    type: entity_reference_paragraphs
+    weight: 34
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_pet_cta_3:
+    type: entity_reference_paragraphs
+    weight: 35
     settings:
       title: Paragraph
       title_plural: Paragraphs

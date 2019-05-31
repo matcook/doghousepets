@@ -1,0 +1,31 @@
+uuid: d0a3a62f-d240-4ec1-98b8-0e4da382b58e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.pet_image
+    - field.storage.block_content.field_pet_cta_2
+    - paragraphs.paragraphs_type.pet_cta
+  module:
+    - entity_reference_revisions
+id: block_content.pet_image.field_pet_cta_2
+field_name: field_pet_cta_2
+entity_type: block_content
+bundle: pet_image
+label: 'Pet CTA 2'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      pet_cta: pet_cta
+    target_bundles_drag_drop:
+      pet_cta:
+        enabled: true
+        weight: 2
+field_type: entity_reference_revisions

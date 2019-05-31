@@ -14,12 +14,13 @@ features:
   comment_user_verification: true
   favicon: true
 logo:
-  use_default: true
-  path: ''
+  use_default: false
+  path: 'public://logo.svg'
 favicon:
-  use_default: true
-  path: ''
-omega_toggle_intro: 1
+  use_default: false
+  path: 'public://logo.svg'
+  mimetype: image/svg+xml
+omega_toggle_intro: 0
 enable_backups: 0
 force_subtheme_creation: 0
 block_demo_mode: 0
@@ -53,3 +54,5 @@ styles:
   omega/omega_forms: 0
 layout-config:
   non_omegags_info: ''
+node_type_animal_layout: primary
+taxonomy_pets_layout: primary

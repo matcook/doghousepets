@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.paragraph.pet_cta.field_pet_image
     - field.field.paragraph.pet_cta.field_pet_page_link
-    - image.style.medium
     - paragraphs.paragraphs_type.pet_cta
   module:
     - image
@@ -20,7 +19,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: medium
+      image_style: ''
       image_link: ''
     third_party_settings:
       linked_field:

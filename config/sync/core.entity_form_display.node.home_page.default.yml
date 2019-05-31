@@ -1,0 +1,33 @@
+uuid: 37069ac9-7049-464e-abf8-e13e68ef1e72
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.home_page
+  module:
+    - path
+id: node.home_page.default
+targetEntityType: node
+bundle: home_page
+mode: default
+content:
+  path:
+    type: path
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  status: true
+  sticky: true
+  uid: true

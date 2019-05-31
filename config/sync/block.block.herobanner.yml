@@ -21,7 +21,7 @@ settings:
   id: 'block_content:19f4636b-3db8-4429-9c55-4ed9a693b1b3'
   label: 'Hero Banner'
   provider: block_content
-  label_display: visible
+  label_display: '0'
   status: true
   info: ''
   view_mode: full

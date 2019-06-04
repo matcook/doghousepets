@@ -1,25 +1,28 @@
-uuid: e92531a8-9a2e-4125-9194-35404acb425e
+uuid: aa8dccdc-5926-4a0a-9493-ef5090682478
 langcode: en
 status: true
 dependencies:
   config:
     - block_visibility_groups.block_visibility_group.home_page
+    - views.view.latest_animals
   module:
     - block_visibility_groups
-    - pet_store_friends
+    - views
   theme:
     - doghouse_pets
-id: petstorefriends
+id: views_block__latest_animals_block_1
 theme: doghouse_pets
 region: content
-weight: 0
+weight: -2
 provider: null
-plugin: pet_store_friends_block
+plugin: 'views_block:latest_animals-block_1'
 settings:
-  id: pet_store_friends_block
-  label: 'Pet Store Friends'
-  provider: pet_store_friends
-  label_display: '0'
+  id: 'views_block:latest_animals-block_1'
+  label: 'Browse Animals'
+  provider: views
+  label_display: visible
+  views_label: 'Browse Animals'
+  items_per_page: none
 visibility:
   condition_group:
     id: condition_group

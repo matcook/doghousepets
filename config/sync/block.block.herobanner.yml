@@ -14,7 +14,7 @@ dependencies:
 id: herobanner
 theme: doghouse_pets
 region: content
-weight: -6
+weight: -4
 provider: null
 plugin: 'block_content:19f4636b-3db8-4429-9c55-4ed9a693b1b3'
 settings:

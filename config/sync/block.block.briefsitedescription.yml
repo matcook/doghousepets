@@ -14,7 +14,7 @@ dependencies:
 id: briefsitedescription
 theme: doghouse_pets
 region: content
-weight: -5
+weight: -3
 provider: null
 plugin: 'block_content:3e17cd30-b02b-4773-a695-d9602f7ebd93'
 settings:

@@ -1,0 +1,4 @@
+$navbar-height: 4em;
+$grays: (light: map-get($duk-grays, "200"),
+  medium: map-get($duk-grays, "500"),
+  dark: map-get($duk-grays, "800"));

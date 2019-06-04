@@ -3,7 +3,7 @@
   @extend %duk-nav--horizontal;
 
   &--logo {
-    height: 60px;
+    height: $navbar-height;
   }
 
   &--slogan {
@@ -25,6 +25,6 @@
 
   .site-name-slogan .site-name a {
     @extend %site-branding--slogan;
-    color: #fff;
+    color: map-get($grays, light);
   }
 }

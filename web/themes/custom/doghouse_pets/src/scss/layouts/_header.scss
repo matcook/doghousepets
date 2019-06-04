@@ -14,8 +14,8 @@
 //    </div>
 //  <div>
 .site-header {
-  height: 60px;
-  background: #333;
+  height: $navbar-height;
+  background: map-get($grays, dark);
 }
 
 

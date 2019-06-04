@@ -20,17 +20,17 @@
   float: right;
 
   &--menu {
-    @extend %duk-nav--horizontal
+    @extend %duk-nav--horizontal;
   }
 
   &--item {
-    color: #fff;
+    color: map-get($grays, light);
     text-decoration: none;
-    line-height: 60px;
-    padding: 0 20px;
+    line-height: $navbar-height;
+    padding: 0 1.2em;
 
     &:hover {
-      color: #ccc;
+      color: map-get($grays, medium);
     }
   }
 }

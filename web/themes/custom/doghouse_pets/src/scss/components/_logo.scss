@@ -1,0 +1,34 @@
+.site-branding,
+%site-branding {
+  @extend %duk-nav--horizontal;
+
+  &--logo {
+    height: $navbar-height;
+  }
+
+  &--slogan {
+    text-decoration: none;
+    display: none;
+
+    @include duk-breakpoint('small') {
+      display: block;
+    }
+  }
+}
+
+#site-branding {
+  @extend %site-branding;
+
+  #logo a {
+    padding: 0;
+
+    img {
+      @extend %site-branding--logo;
+    }
+  }
+
+  .site-name-slogan .site-name a {
+    @extend %site-branding--slogan;
+    color: map-get($grays, light);
+  }
+}

@@ -5,17 +5,44 @@
 //
 // Defines the main nav style.
 //
-// Style guide: Components.nav-main
+// Style guide: Components.nav
 //
 // Markup:
-//  <div id="region-primary-menu">
+//  <div id="main-nav">
 //    <ul class="menu">
 //      <li><a href="#">Home</a></li>
 //      <li><a href="#">About</a></li>
 //      <li><a href="#">Contact</a></li>
 //    </ul>
 //  <div>
-.region-primary-menu,
-.region-secondary-menu {
+.main-nav,
+%main-nav {
   float: right;
+
+  &--menu {
+    @extend %duk-nav--horizontal;
+  }
+
+  &--item {
+    color: map-get($grays, light);
+    text-decoration: none;
+    line-height: $navbar-height;
+    padding: 0 1.2em;
+
+    &:hover {
+      color: map-get($grays, medium);
+    }
+  }
+}
+
+.menu--main {
+  @extend %main-nav;
+
+  .menu {
+    @extend %main-nav--menu;
+  }
+
+  .menu-item a {
+    @extend %main-nav--item;
+  }
 }

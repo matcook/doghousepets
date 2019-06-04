@@ -9,24 +9,16 @@
 //
 // Markup:
 //  <div id="header">
-//    <div class="block-system-branding">
+//    <div class="site-header">
 //      <img src="http://placekitten.com/g/300/300">
 //    </div>
 //  <div>
 .site-header {
-  @extend %duk-island--primary;
-
-  .container {
-    @extend %duk-container--x-large;
-    @extend %duk-island;
-    @extend %duk-clearfix;
-  }
+  height: $navbar-height;
+  background: map-get($grays, dark);
 }
 
-.block-system-branding-block {
-  float: left;
 
-  img {
-    width: 5em;
-  }
+.region--header {
+  @extend .site-header;
 }

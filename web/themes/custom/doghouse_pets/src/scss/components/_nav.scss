@@ -19,3 +19,11 @@
 .region-secondary-menu {
   float: right;
 }
+
+.menu--main {
+  @extend .region-primary-menu;
+
+  .menu {
+    @extend %duk-nav--horizontal;
+  }
+}

@@ -1,0 +1,9 @@
+.site-logo {
+  text-transform: uppercase;
+
+  &--image {}
+}
+
+#logo a img {
+  @extend .site-logo;
+}

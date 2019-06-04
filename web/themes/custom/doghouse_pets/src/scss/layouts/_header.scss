@@ -30,3 +30,9 @@
     width: 5em;
   }
 }
+
+
+.region--header {
+  @extend .site-header;
+  height: 60px;
+}

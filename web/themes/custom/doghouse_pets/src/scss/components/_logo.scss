@@ -1,9 +1,30 @@
-.site-logo {
-  text-transform: uppercase;
+.site-branding,
+%site-branding {
+  @extend %duk-nav--horizontal;
 
-  &--image {}
+  &--logo {
+    height: 60px;
+  }
+
+  &--slogan {
+    text-transform: uppercase;
+    text-decoration: none;
+  }
 }
 
-#logo a img {
-  @extend .site-logo;
+#site-branding {
+  @extend %site-branding;
+
+  #logo a {
+    padding: 0;
+
+    img {
+      @extend %site-branding--logo;
+    }
+  }
+
+  .site-name-slogan .site-name a {
+    @extend %site-branding--slogan;
+    color: #fff;
+  }
 }

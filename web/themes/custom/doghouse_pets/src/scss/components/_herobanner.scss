@@ -10,7 +10,7 @@
   &--text {
     position: absolute;
     @extend %duk-text-align-center;
-    @extend %duk-text--x-large;
+    @extend %duk-text--large;
   }
 
   &--button {

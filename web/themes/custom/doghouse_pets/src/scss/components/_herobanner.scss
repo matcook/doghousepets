@@ -1,0 +1,48 @@
+.hero-banner,
+%hero-banner {
+  position: relative;
+  margin: 0 auto;
+
+  &--image {
+    min-height: 20em;
+  }
+
+  &--text {
+    position: absolute;
+    @extend %duk-text-align-center;
+    @extend %duk-text--x-large;
+  }
+
+  &--button {
+    position: absolute;
+  }
+}
+
+#block-herobanner div {
+  @extend %hero-banner;
+
+  .field--name-field-hero-image img {
+    @extend %hero-banner--image;
+  }
+
+  .field--name-field-hero-text {
+    @extend %hero-banner--text;
+    top: 20%;
+    left: 0;
+    right: 0;
+    width: 60%;
+  }
+
+  .field--name-field-hero-button {
+    @extend %hero-banner--button;
+    width: 10em;
+    left: 0;
+    right: 0;
+    top: 70%;
+
+    a {
+      @extend .button--primary;
+      width: 100%;
+    }
+  }
+}

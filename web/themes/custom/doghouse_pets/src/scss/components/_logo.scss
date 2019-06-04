@@ -7,8 +7,12 @@
   }
 
   &--slogan {
-    text-transform: uppercase;
     text-decoration: none;
+    display: none;
+
+    @include duk-breakpoint('small') {
+      display: block;
+    }
   }
 }
 

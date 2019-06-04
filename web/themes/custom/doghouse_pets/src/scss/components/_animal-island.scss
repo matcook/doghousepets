@@ -1,0 +1,38 @@
+.animal-container,
+%animal-container {
+  @extend %duk-container--x-large;
+
+  &__heading {
+    text-align: center;
+    padding: 1em 0;
+  }
+
+  &__content {
+    @extend %duk-grid--3-col;
+  }
+
+  &__button {
+    @extend .button--secondary;
+    @extend .duk-mt--1;
+  }
+}
+
+.views-element-container {
+  @extend %animal-container;
+
+  h2 {
+    @extend %animal-container__heading;
+  }
+
+  .view-content {
+    @extend %animal-container__content;
+  }
+
+  .more-link {
+    text-align: center;
+
+    a {
+      @extend %animal-container__button;
+    }
+  }
+}

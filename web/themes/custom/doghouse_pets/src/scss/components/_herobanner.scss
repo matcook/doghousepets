@@ -27,7 +27,7 @@
 
   .field--name-field-hero-text {
     @extend %hero-banner--text;
-    top: 20%;
+    top: 25%;
     left: 0;
     right: 0;
     width: 60%;
@@ -38,7 +38,11 @@
     width: 10em;
     left: 0;
     right: 0;
-    top: 70%;
+    top: 55%;
+
+    @include duk-breakpoint('large') {
+      top: 40%;
+    }
 
     a {
       @extend .button--primary;

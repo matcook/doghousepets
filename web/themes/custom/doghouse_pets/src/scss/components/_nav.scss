@@ -24,13 +24,13 @@
   }
 
   &--item {
-    color: map-get($grays, light);
+    color: map-get($grays, 'light');
     text-decoration: none;
     line-height: $navbar-height;
     padding: 0 1.2em;
 
     &:hover {
-      color: map-get($grays, medium);
+      color: map-get($grays, 'medium');
     }
   }
 }

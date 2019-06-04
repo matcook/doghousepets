@@ -29,6 +29,6 @@
 
   .site-name-slogan .site-name a {
     @extend %site-branding--slogan;
-    color: map-get($grays, light);
+    color: map-get($grays, 'light');
   }
 }

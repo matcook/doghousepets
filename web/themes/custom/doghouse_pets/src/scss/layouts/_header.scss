@@ -15,7 +15,7 @@
 //  <div>
 .site-header {
   height: $navbar-height;
-  background: map-get($grays, dark);
+  background: map-get($grays, 'dark');
 }
 
 

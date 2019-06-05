@@ -14,7 +14,7 @@ dependencies:
 id: contactpage
 theme: doghouse_pets
 region: content
-weight: 0
+weight: 1
 provider: null
 plugin: 'block_content:70df2d13-0b7c-4a87-bd55-d31196823f2b'
 settings:

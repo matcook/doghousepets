@@ -1,27 +1,27 @@
-uuid: 037d4547-ee26-41b7-aa53-382578eb620c
+uuid: a4b6bb14-8c58-4e88-bee8-d3b1f4617402
 langcode: en
 status: true
 dependencies:
   config:
     - block_visibility_groups.block_visibility_group.home_page
-    - views.view.home_page_articles
+    - views.view.article_page
   module:
     - block_visibility_groups
     - views
   theme:
     - doghouse_pets
-id: views_block__home_page_articles_block_1
+id: views_block__article_page_block_1
 theme: doghouse_pets
 region: content
-weight: -1
+weight: 0
 provider: null
-plugin: 'views_block:home_page_articles-block_1'
+plugin: 'views_block:article_page-block_1'
 settings:
-  id: 'views_block:home_page_articles-block_1'
-  label: ''
+  id: 'views_block:article_page-block_1'
+  label: Articles
   provider: views
   label_display: visible
-  views_label: ''
+  views_label: Articles
   items_per_page: none
 visibility:
   condition_group:

@@ -1,0 +1,70 @@
+uuid: 919e6aad-b6ff-49cb-87d8-7b2d1bdbd3af
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.animal.body
+    - field.field.node.animal.field_animal_type
+    - field.field.node.animal.field_care_instructions
+    - field.field.node.animal.field_category
+    - field.field.node.animal.field_image
+    - field.field.node.animal.field_pet_good_for
+    - image.style.medium
+    - node.type.animal
+  module:
+    - ds
+    - image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_image
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: span
+          class: animal-label
+id: node.animal.card
+targetEntityType: node
+bundle: animal
+mode: card
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+    type: image
+    region: ds_content
+hidden:
+  body: true
+  field_animal_type: true
+  field_care_instructions: true
+  field_category: true
+  field_pet_good_for: true
+  like_and_dislike: true
+  links: true

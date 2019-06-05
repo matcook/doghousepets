@@ -12,7 +12,7 @@ dependencies:
 id: petstorefriends
 theme: doghouse_pets
 region: content
-weight: 0
+weight: 2
 provider: null
 plugin: pet_store_friends_block
 settings:

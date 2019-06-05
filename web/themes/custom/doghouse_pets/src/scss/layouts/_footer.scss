@@ -51,6 +51,10 @@
         text-decoration: none;
         color: map-get($grays, 'medium');
         padding: 0 1em;
+
+        &:hover {
+          color: map-get($grays, 'light');
+        }
       }
     }
   }

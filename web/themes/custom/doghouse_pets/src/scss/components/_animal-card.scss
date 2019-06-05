@@ -9,7 +9,6 @@
   }
 
   &__label {
-    // @extend .button--tertiary;
     text-decoration: none;
     @extend .duk-text--large;
   }
@@ -18,11 +17,11 @@
 .view-latest-animals .view-content .views-row {
   @extend %animal-card;
 
-  div div a img {
+  .animal-image a img {
     @extend %animal-card__image;
   }
 
-  div span a {
+  .views-field-title span a {
     @extend .duk-mt--2;
     @extend %animal-card__label;
   }

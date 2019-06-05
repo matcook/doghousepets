@@ -36,11 +36,11 @@ third_party_settings:
           layout_class: {  }
     regions:
       header:
-        - like_and_dislike
+        - node_title
       left:
         - field_image
       right:
-        - node_title
+        - like_and_dislike
         - field_animal_type
         - body
       footer:
@@ -49,7 +49,7 @@ third_party_settings:
     fields:
       node_title:
         plugin_id: node_title
-        weight: 2
+        weight: 0
         label: hidden
         formatter: default
 id: node.animal.default
@@ -96,8 +96,8 @@ content:
     type: text_default
     region: footer
   like_and_dislike:
-    weight: 0
-    region: header
+    weight: 2
+    region: right
     settings: {  }
     third_party_settings: {  }
 hidden:

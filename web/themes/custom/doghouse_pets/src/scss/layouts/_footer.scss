@@ -1,21 +1,57 @@
-// Footer
-// -------------------------------------------------------
-
-// Footer
-//
-// Defines the footer layout.
-//
-// Style guide: Layouts.footer
-//
-// Markup:
-//  <div id="footer"><div class="container">
-//    I am some content in the main site footer
-//  </div></div>
 #footer {
-  @extend %duk-island--tertiary;
+  background: map-get($grays, 'dark');
 
-  > .container {
-    @extend %duk-island;
-    @extend %duk-container--x-large;
+  &__img {
+    max-width: 100px;
+    display: block;
+    margin: auto;
+  }
+
+  &__text {
+    @extend %duk-container--small;
+    text-align: center;
+    color: map-get($grays, 'light');
+  }
+
+  &__nav {
+    @extend %duk-nav--horizontal;
+    justify-content: center;
+    padding: 2em 0 3em;
+  }
+}
+
+.region--footer {
+  @extend #footer;
+
+  .field--name-field-block-image {
+    padding-top: 5em;
+    padding-bottom: 1em;
+  }
+
+  img {
+    @extend #footer__img;
+  }
+
+  p {
+    @extend #footer__text;
+  }
+
+  .menu {
+    @extend #footer__nav;
+
+
+    li {
+      border-left: 1px solid map-get($grays, 'medium');
+
+      &:nth-of-type(1) {
+        border-left: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: map-get($grays, 'medium');
+        padding: 0 1em;
+      }
+    }
   }
 }

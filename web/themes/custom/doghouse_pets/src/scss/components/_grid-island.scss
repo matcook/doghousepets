@@ -1,0 +1,38 @@
+.grid-container,
+%grid-container {
+  @extend %duk-container--x-large;
+
+  &__heading {
+    text-align: center;
+    padding: 1em 0;
+  }
+
+  &__content {
+    @extend %duk-grid--3-col;
+  }
+
+  &__button {
+    @extend .button--secondary;
+    @extend .duk-mt--1;
+  }
+}
+
+#block-views-block-latest-animals-block-1 {
+  @extend %grid-container;
+
+  h2 {
+    @extend %grid-container__heading;
+  }
+
+  .view-content {
+    @extend %grid-container__content;
+  }
+
+  .more-link {
+    text-align: center;
+
+    a {
+      @extend %grid-container__button;
+    }
+  }
+}

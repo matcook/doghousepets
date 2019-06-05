@@ -1,0 +1,31 @@
+uuid: 7e3e9b5e-152d-4a4a-a513-67152c319605
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4157f1f2-f95f-4c2b-879c-424ed2ed2dfa'
+  module:
+    - block_content
+    - block_visibility_groups
+  theme:
+    - doghouse_pets
+id: footerblurb
+theme: doghouse_pets
+region: footer
+weight: -6
+provider: null
+plugin: 'block_content:4157f1f2-f95f-4c2b-879c-424ed2ed2dfa'
+settings:
+  id: 'block_content:4157f1f2-f95f-4c2b-879c-424ed2ed2dfa'
+  label: 'Footer Blurb'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }

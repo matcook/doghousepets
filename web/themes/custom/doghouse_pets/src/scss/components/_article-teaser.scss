@@ -15,7 +15,7 @@
 
   &__body {
     margin: 0;
-    padding: 0.5em 0;
+    padding: 0.5em 1em;
   }
 }
 
@@ -41,12 +41,21 @@
       width: 80%;
     }
 
+    h4 {
+      padding: 0 0.5em;
+      margin: 0;
+    }
+
     a {
       @extend %article-teaser__title;
     }
 
     p {
       @extend %article-teaser__body;
+    }
+
+    .field--name-node-post-date {
+      padding: 0 1em;
     }
   }
 }

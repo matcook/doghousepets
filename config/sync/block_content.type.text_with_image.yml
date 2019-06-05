@@ -1,0 +1,8 @@
+uuid: bf0b557c-065e-44b8-965f-567f4485d3fc
+langcode: en
+status: true
+dependencies: {  }
+id: text_with_image
+label: 'Text with image'
+revision: 0
+description: ''

@@ -1,9 +1,9 @@
-uuid: 7e3e9b5e-152d-4a4a-a513-67152c319605
+uuid: 49b75420-d52a-452d-9682-b7e963c1b10f
 langcode: en
 status: true
 dependencies:
   content:
-    - 'block_content:basic:4157f1f2-f95f-4c2b-879c-424ed2ed2dfa'
+    - 'block_content:text_with_image:6ef3e919-64c5-4d7f-8cb6-4511f9ae8065'
   module:
     - block_content
     - block_visibility_groups
@@ -14,9 +14,9 @@ theme: doghouse_pets
 region: footer
 weight: -6
 provider: null
-plugin: 'block_content:4157f1f2-f95f-4c2b-879c-424ed2ed2dfa'
+plugin: 'block_content:6ef3e919-64c5-4d7f-8cb6-4511f9ae8065'
 settings:
-  id: 'block_content:4157f1f2-f95f-4c2b-879c-424ed2ed2dfa'
+  id: 'block_content:6ef3e919-64c5-4d7f-8cb6-4511f9ae8065'
   label: 'Footer Blurb'
   provider: block_content
   label_display: '0'

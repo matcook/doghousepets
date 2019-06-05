@@ -1,30 +1,29 @@
-uuid: d571d892-5749-4d8b-b39e-4d73d704ef6a
+uuid: bec9702c-c165-4ed0-8c1e-ae394d3642ed
 langcode: en
 status: true
 dependencies:
   config:
     - block_visibility_groups.block_visibility_group.contact_page
-  content:
-    - 'block_content:contact_page:70df2d13-0b7c-4a87-bd55-d31196823f2b'
+    - webform.webform.contact
   module:
-    - block_content
     - block_visibility_groups
+    - webform
   theme:
     - doghouse_pets
-id: contactpage
+id: webform
 theme: doghouse_pets
 region: content
-weight: -3
+weight: -2
 provider: null
-plugin: 'block_content:70df2d13-0b7c-4a87-bd55-d31196823f2b'
+plugin: webform_block
 settings:
-  id: 'block_content:70df2d13-0b7c-4a87-bd55-d31196823f2b'
-  label: 'Contact Page'
-  provider: block_content
+  id: webform_block
+  label: Webform
+  provider: webform
   label_display: '0'
-  status: true
-  info: ''
-  view_mode: full
+  webform_id: contact
+  default_data: ''
+  redirect: false
 visibility:
   condition_group:
     id: condition_group

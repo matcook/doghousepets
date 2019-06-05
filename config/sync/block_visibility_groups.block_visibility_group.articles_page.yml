@@ -1,0 +1,17 @@
+uuid: 1c1e6a02-844b-4dd6-ace1-274f62c93bba
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: articles_page
+label: 'Articles Page'
+logic: and
+conditions:
+  27b7a421-8fe1-4b41-88b2-dcdcfdbe3f89:
+    id: request_path
+    pages: /articles
+    negate: false
+    context_mapping: {  }
+    uuid: 27b7a421-8fe1-4b41-88b2-dcdcfdbe3f89
+allow_other_conditions: false

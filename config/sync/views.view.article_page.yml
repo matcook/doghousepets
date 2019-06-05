@@ -311,8 +311,7 @@ display:
           quantity: 9
       defaults:
         pager: false
-        title: false
-      title: 'Latest Articles'
+        title: true
     cache_metadata:
       max-age: -1
       contexts:

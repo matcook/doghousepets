@@ -14,7 +14,7 @@ dependencies:
 id: exposedformanimalspage_1
 theme: doghouse_pets
 region: content
-weight: -5
+weight: -2
 provider: null
 plugin: 'views_exposed_filter_block:animals-page_1'
 settings:

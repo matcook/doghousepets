@@ -14,14 +14,14 @@
   }
 }
 
-.view-latest-animals .view-content .views-row {
+.view-content .views-row {
   @extend %animal-card;
 
-  .animal-image a img {
+  .animal-image img {
     @extend %animal-card__image;
   }
 
-  .views-field-title span a {
+  .animal-label a {
     @extend .duk-mt--2;
     @extend %animal-card__label;
   }

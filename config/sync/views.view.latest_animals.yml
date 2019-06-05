@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.card
     - field.storage.node.field_image
     - image.style.medium
     - node.type.animal
@@ -62,7 +63,10 @@ display:
           row_class: ''
           default_row_class: true
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card
       fields:
         field_image:
           id: field_image
@@ -101,7 +105,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: ''
-          element_class: ''
+          element_class: animal-image
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false

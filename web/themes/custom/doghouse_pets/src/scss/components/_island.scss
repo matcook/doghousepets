@@ -1,0 +1,19 @@
+.island,
+%island {
+  padding: 0 1em;
+  @extend %duk-container--x-large;
+
+  %island-heading {
+    width: 100%;
+    text-align: center;
+    @extend .duk-mb--2;
+  }
+}
+
+.views-element-container {
+  @extend %island;
+
+  h2 {
+    @extend %island-heading;
+  }
+}

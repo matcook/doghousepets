@@ -18,10 +18,10 @@ provider: null
 plugin: 'views_block:article_page-block_1'
 settings:
   id: 'views_block:article_page-block_1'
-  label: Articles
+  label: ''
   provider: views
   label_display: visible
-  views_label: Articles
+  views_label: ''
   items_per_page: none
 visibility:
   condition_group:

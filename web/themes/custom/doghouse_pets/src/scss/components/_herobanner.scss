@@ -1,0 +1,56 @@
+.hero-banner,
+%hero-banner {
+  position: relative;
+  margin: 0 auto;
+
+  &__image {
+    min-height: 20em;
+  }
+
+  &__text {
+    position: absolute;
+    @extend %duk-text-align-center;
+    @extend %duk-text--large;
+  }
+
+  &__button {
+    @extend .button--primary;
+  }
+
+  &--center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+}
+
+#block-herobanner>div {
+  @extend %hero-banner;
+
+  .field--name-field-hero-image img {
+    @extend %hero-banner__image;
+  }
+
+  .field--name-field-hero-text {
+    @extend %hero-banner__text;
+    @extend %hero-banner--center;
+    width: 60%;
+    top: 25%;
+  }
+
+  .field--name-field-hero-button {
+    @extend %hero-banner--center;
+    width: 10em;
+    top: 55%;
+
+    @include duk-breakpoint('large') {
+      top: 40%;
+    }
+
+    a {
+      @extend %hero-banner__button;
+      width: 100%;
+    }
+  }
+}

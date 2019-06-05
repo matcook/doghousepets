@@ -14,11 +14,18 @@
   }
 
   &__button {
+    @extend .button--primary;
+  }
+
+  &--center {
     position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 }
 
-#block-herobanner div {
+#block-herobanner>div {
   @extend %hero-banner;
 
   .field--name-field-hero-image img {
@@ -27,17 +34,14 @@
 
   .field--name-field-hero-text {
     @extend %hero-banner__text;
-    top: 25%;
-    left: 0;
-    right: 0;
+    @extend %hero-banner--center;
     width: 60%;
+    top: 25%;
   }
 
   .field--name-field-hero-button {
-    @extend %hero-banner__button;
+    @extend %hero-banner--center;
     width: 10em;
-    left: 0;
-    right: 0;
     top: 55%;
 
     @include duk-breakpoint('large') {
@@ -45,7 +49,7 @@
     }
 
     a {
-      @extend .button--primary;
+      @extend %hero-banner__button;
       width: 100%;
     }
   }

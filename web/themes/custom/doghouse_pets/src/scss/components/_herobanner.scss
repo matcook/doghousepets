@@ -3,17 +3,17 @@
   position: relative;
   margin: 0 auto;
 
-  &--image {
+  &__image {
     min-height: 20em;
   }
 
-  &--text {
+  &__text {
     position: absolute;
     @extend %duk-text-align-center;
     @extend %duk-text--large;
   }
 
-  &--button {
+  &__button {
     position: absolute;
   }
 }
@@ -22,11 +22,11 @@
   @extend %hero-banner;
 
   .field--name-field-hero-image img {
-    @extend %hero-banner--image;
+    @extend %hero-banner__image;
   }
 
   .field--name-field-hero-text {
-    @extend %hero-banner--text;
+    @extend %hero-banner__text;
     top: 25%;
     left: 0;
     right: 0;
@@ -34,7 +34,7 @@
   }
 
   .field--name-field-hero-button {
-    @extend %hero-banner--button;
+    @extend %hero-banner__button;
     width: 10em;
     left: 0;
     right: 0;

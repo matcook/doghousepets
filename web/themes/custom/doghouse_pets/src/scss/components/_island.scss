@@ -1,12 +1,12 @@
 .island,
 %island {
   @extend %duk-container--large;
-  padding: 0 1em;
+  padding: 1em 0;
 
   &__heading {
-    @extend .duk-mb--2;
     width: 100%;
     text-align: center;
+    padding: 1em 0;
   }
 }
 

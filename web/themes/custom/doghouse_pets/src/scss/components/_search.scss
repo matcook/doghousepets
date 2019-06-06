@@ -1,0 +1,34 @@
+.search-container,%search-container{
+  @extend %duk-container--x-large;
+  display: flex;
+  padding: 1em;
+  flex-wrap: wrap;
+
+  &__input {
+    width: 100%;
+
+    @include duk-breakpoint('medium'){
+      flex: 1;
+    }
+  }
+
+  &__button {
+    width: 10em;
+  }
+}
+
+#views-exposed-form-animals-page-1 .form--inline {
+  @extend %search-container;
+
+  .js-form-item {
+    @extend %search-container__input;
+  }
+
+  .form-actions{
+    @extend %search-container__button;
+
+    .button {
+      width: 100%;
+    }
+  }
+}

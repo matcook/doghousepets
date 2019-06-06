@@ -1,0 +1,36 @@
+.article,
+%article {
+  @extend %duk-container--large;
+  padding: 2em;
+
+  &__title {
+    @extend .duk-mb--1;
+  }
+
+  &__image {
+    width: 100%;
+    max-height: 20em;
+  }
+
+  &__details {
+    color: map-get($grays, 'medium');
+    padding: 1em;
+    text-align: right;
+  }
+}
+
+.node--type-article.node--view-mode-full {
+  @extend %article;
+
+  h2 {
+    @extend %article__title;
+  }
+
+  img {
+    @extend %article__image;
+  }
+
+  .field--name-node-post-date {
+    @extend %article__details;
+  }
+}

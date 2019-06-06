@@ -1,6 +1,5 @@
 .text-block,
 %text-block {
-  background: map-get($grays, 'light');
   padding: 2em 0;
 
   &__text {
@@ -11,7 +10,12 @@
   }
 }
 
-#block-briefsitedescription, .field--name-field-contact-details {
+#block-briefsitedescription {
+  background: map-get($grays, 'light');
+}
+
+#block-briefsitedescription,
+.field--name-field-contact-details {
   @extend %text-block;
 
   p {

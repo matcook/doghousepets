@@ -25,6 +25,16 @@
   }
 }
 
+#block-contactpage {
+  @extend %hero-banner;
+  @extend %duk-container--x-large;
+
+  img {
+    @extend %hero-banner__image;
+  }
+}
+
+
 #block-herobanner>div {
   @extend %hero-banner;
 

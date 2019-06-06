@@ -3,7 +3,7 @@
   @extend %duk-container--x-large;
   padding: 0 1em;
 
-  %island-heading {
+  &__heading {
     @extend .duk-mb--2;
     width: 100%;
     text-align: center;
@@ -20,6 +20,6 @@
   }
 
   h2 {
-    @extend %island-heading;
+    @extend %island__heading;
   }
 }

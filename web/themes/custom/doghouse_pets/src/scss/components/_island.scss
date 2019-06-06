@@ -15,7 +15,7 @@
     background: map-get($grays, 'light');
   }
 
-  &>div {
+  & > div {
     @extend %island;
   }
 

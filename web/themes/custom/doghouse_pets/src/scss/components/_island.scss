@@ -1,19 +1,25 @@
 .island,
 %island {
-  padding: 0 1em;
   @extend %duk-container--x-large;
+  padding: 0 1em;
 
-  %island-heading {
+  &__heading {
+    @extend .duk-mb--2;
     width: 100%;
     text-align: center;
-    @extend .duk-mb--2;
   }
 }
 
 .views-element-container {
-  @extend %island;
+  &:nth-of-type(odd) {
+    background: map-get($grays, 'light');
+  }
+
+  & > div {
+    @extend %island;
+  }
 
   h2 {
-    @extend %island-heading;
+    @extend %island__heading;
   }
 }

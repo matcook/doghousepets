@@ -1,0 +1,20 @@
+.text-block,
+%text-block {
+  background: map-get($grays, 'light');
+  padding: 2em 0;
+
+  &__text {
+    @extend %duk-container--large;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1em;
+  }
+}
+
+#block-briefsitedescription {
+  @extend %text-block;
+
+  p {
+    @extend %text-block__text;
+  }
+}

@@ -11,7 +11,7 @@
   }
 }
 
-#block-briefsitedescription {
+#block-briefsitedescription, .field--name-field-contact-details {
   @extend %text-block;
 
   p {

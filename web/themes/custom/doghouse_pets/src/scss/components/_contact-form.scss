@@ -1,0 +1,40 @@
+.form-container,
+%form-container {
+  @extend %duk-container--large;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+
+  &__input {
+    width: 100%;
+    padding: 0 1em;
+
+    @include duk-breakpoint('small') {
+      width: 50%;
+    }
+  }
+
+  &__message {
+    width: 100%;
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}
+
+.webform-submission-contact-form {
+  @extend %form-container;
+
+  .form-item {
+    @extend %form-container__input;
+  }
+
+  .form-type-textarea {
+    @extend %form-container__message;
+  }
+
+  .form-actions {
+    @extend %form-container__button;
+  }
+}

@@ -14,10 +14,10 @@
   }
 }
 
-.view-latest-animals .views-row {
+.view-latest-animals .views-row, .view-animals .views-row {
   @extend %animal-card;
 
-  .animal-image img {
+  .field--name-field-image img {
     @extend %animal-card__image;
   }
 

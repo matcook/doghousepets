@@ -48,7 +48,7 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Search
           reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -230,7 +230,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Name
+            label: ''
             description: ''
             use_operator: false
             operator: title_op
@@ -242,7 +242,7 @@ display:
               authenticated: authenticated
               anonymous: '0'
               administrator: '0'
-            placeholder: ''
+            placeholder: 'Search by name'
           is_grouped: false
           group_info:
             label: ''
@@ -271,7 +271,7 @@ display:
           exposed: true
           expose:
             operator_id: tid_op
-            label: 'Animal Type'
+            label: ''
             description: ''
             use_operator: false
             operator: tid_op
@@ -286,16 +286,19 @@ display:
             reduce: false
           is_grouped: false
           group_info:
-            label: ''
-            description: ''
-            identifier: ''
+            label: 'Has taxonomy term'
+            description: null
+            identifier: tid
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items: {  }
+            group_items:
+              1: {  }
+              2: {  }
+              3: {  }
           reduce_duplicates: false
           type: select
           limit: true

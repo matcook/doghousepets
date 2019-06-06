@@ -17,7 +17,8 @@
   }
 }
 
-#block-views-block-latest-animals-block-1 {
+#block-views-block-latest-animals-block-1,
+.views-element-container .view-animals {
   @extend %grid-container;
 
   h2 {

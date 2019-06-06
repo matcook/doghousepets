@@ -1,6 +1,6 @@
 .island,
 %island {
-  @extend %duk-container--x-large;
+  @extend %duk-container--large;
   padding: 0 1em;
 
   &__heading {
@@ -15,7 +15,7 @@
     background: map-get($grays, 'light');
   }
 
-  & > div {
+  &>div {
     @extend %island;
   }
 

@@ -17,14 +17,15 @@
   }
 }
 
-#block-views-block-latest-animals-block-1,.views-element-container .view-animals{
+#block-views-block-latest-animals-block-1,
+.views-element-container .view-animals {
   @extend %grid-container;
 
   h2 {
     @extend %grid-container__heading;
   }
 
-  .view-content,.view-animals .view-content {
+  .view-content {
     @extend %grid-container__content;
   }
 

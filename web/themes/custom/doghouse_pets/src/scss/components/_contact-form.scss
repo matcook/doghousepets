@@ -1,5 +1,5 @@
-.form-container,
-%form-container {
+.contact-form,
+%contact-form {
   @extend %duk-container--large;
   display: flex;
   flex-wrap: wrap;
@@ -24,17 +24,17 @@
 }
 
 .webform-submission-contact-form {
-  @extend %form-container;
+  @extend %contact-form;
 
   .form-item {
-    @extend %form-container__input;
+    @extend %contact-form__input;
   }
 
   .form-type-textarea {
-    @extend %form-container__message;
+    @extend %contact-form__message;
   }
 
   .form-actions {
-    @extend %form-container__button;
+    @extend %contact-form__button;
   }
 }

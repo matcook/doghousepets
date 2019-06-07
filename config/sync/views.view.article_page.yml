@@ -254,6 +254,7 @@ display:
         filters: false
         filter_groups: false
         pager: false
+        footer: false
       filter_groups:
         operator: AND
         groups:
@@ -266,6 +267,18 @@ display:
         options:
           items_per_page: 3
           offset: 0
+      footer:
+        display_link:
+          id: display_link
+          table: views
+          field: display_link
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          display_id: page_1
+          label: 'More News'
+          plugin_id: display_link
     cache_metadata:
       max-age: -1
       contexts:

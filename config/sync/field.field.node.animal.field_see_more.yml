@@ -1,0 +1,28 @@
+uuid: dac75d57-4029-48da-9211-116d15960a85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_see_more
+    - node.type.animal
+  module:
+    - link
+id: node.animal.field_see_more
+field_name: field_see_more
+entity_type: node
+bundle: animal
+label: 'See More'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/pets'
+    title: 'See More Pets'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

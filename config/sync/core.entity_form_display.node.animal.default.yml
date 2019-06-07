@@ -9,10 +9,12 @@ dependencies:
     - field.field.node.animal.field_category
     - field.field.node.animal.field_image
     - field.field.node.animal.field_pet_good_for
+    - field.field.node.animal.field_see_more
     - image.style.thumbnail
     - node.type.animal
   module:
     - image
+    - link
     - path
     - text
 id: node.animal.default
@@ -21,7 +23,7 @@ bundle: animal
 mode: default
 content:
   body:
-    weight: 4
+    weight: 3
     settings:
       rows: 9
       summary_rows: 3
@@ -38,7 +40,7 @@ content:
     type: string_textfield
     region: content
   field_care_instructions:
-    weight: 5
+    weight: 4
     settings:
       rows: 5
       placeholder: ''
@@ -46,13 +48,13 @@ content:
     type: text_textarea
     region: content
   field_category:
-    weight: 26
+    weight: 9
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_image:
-    weight: 3
+    weight: 2
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -60,16 +62,24 @@ content:
     type: image_image
     region: content
   field_pet_good_for:
-    weight: 6
+    weight: 5
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
     region: content
+  field_see_more:
+    type: link_default
+    weight: 10
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -77,14 +87,14 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 8
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 7
+    weight: 6
     region: content
     third_party_settings: {  }
   title:

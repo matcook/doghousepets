@@ -9,10 +9,12 @@ dependencies:
     - field.field.node.animal.field_category
     - field.field.node.animal.field_image
     - field.field.node.animal.field_pet_good_for
+    - field.field.node.animal.field_see_more
     - node.type.animal
   module:
     - ds
     - image
+    - link
     - text
     - user
 third_party_settings:
@@ -46,6 +48,7 @@ third_party_settings:
       footer:
         - field_care_instructions
         - field_pet_good_for
+        - field_see_more
     fields:
       node_title:
         plugin_id: node_title
@@ -94,6 +97,18 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: footer
+  field_see_more:
+    weight: 7
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: footer
   like_and_dislike:
     weight: 2

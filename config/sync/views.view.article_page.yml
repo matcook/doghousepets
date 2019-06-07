@@ -162,7 +162,7 @@ display:
           expose:
             label: ''
           granularity: second
-      title: Articles
+      title: 'Animal News'
       header: {  }
       footer: {  }
       empty: {  }

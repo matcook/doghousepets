@@ -1,0 +1,42 @@
+.animal,
+%animal {
+  @extend %duk-container--large;
+
+  &__title {
+    @extend .duk-pl--1;
+  }
+
+  &__image {
+    width: 100%;
+    padding: 1em;
+  }
+
+  &__details {
+    float: right;
+  }
+
+  &__description {
+    padding: 1em;
+  }
+}
+
+.node--type-animal.node--view-mode-full {
+  @extend %animal;
+
+  h2 {
+    @extend %animal__title;
+  }
+
+  img {
+    @extend %animal__image;
+  }
+
+  .vote-widget {
+    @extend %animal__details;
+  }
+
+  .group-right,
+  .group-footer {
+    @extend %animal__description
+  }
+}

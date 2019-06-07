@@ -11,6 +11,7 @@
     @extend %duk-container--small;
     text-align: center;
     color: map-get($grays, 'light');
+    padding: 0 1em;
   }
 
   &__nav {

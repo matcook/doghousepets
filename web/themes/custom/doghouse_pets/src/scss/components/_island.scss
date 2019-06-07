@@ -8,6 +8,10 @@
     text-align: center;
     padding: 1em 0;
   }
+
+  &__button {
+    @extend .button--secondary;
+  }
 }
 
 .node--type-home-page .views-element-container {
@@ -21,5 +25,14 @@
 
   h2 {
     @extend %island__heading;
+  }
+
+  .view-footer {
+    @extend .duk-mb--2;
+    text-align: center;
+  }
+
+  .views-display-link {
+    @extend %island__button;
   }
 }

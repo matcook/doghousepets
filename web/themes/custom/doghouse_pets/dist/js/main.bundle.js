@@ -93,12 +93,18 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-(function ($) {
+(function ($, Drupal) {
   "use strict";
 
-  Drupal.behaviors.customBehavior = {// perform jQuery as normal in here
+  Drupal.behaviors.toggleMenu = {
+    attach: function attach(context, settings) {
+      $('.menu--main', context).append('<div><i class="hamburger"></i></div>');
+      $('.hamburger', context).click(function () {
+        $('.menu--main', context).toggleClass('responsive');
+      });
+    }
   };
-})(jQuery);
+})(jQuery, Drupal);
 
 /***/ }),
 

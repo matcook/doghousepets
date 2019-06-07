@@ -46,7 +46,45 @@
     @extend %main-nav--menu;
   }
 
-  .menu-item a {
+  .menu-item {
+    display: none;
+
+    @include duk-breakpoint('small') {
+      display: block;
+    }
+
+    a {
+      @extend %main-nav--item;
+    }
+  }
+
+  .hamburger {
     @extend %main-nav--item;
+    @extend .duk-icon-navicon;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include duk-breakpoint('small') {
+      display: none;
+    }
+  }
+
+  &.responsive {
+    float: none;
+    position: relative;
+    z-index: 10;
+
+    .menu {
+      position: absolute;
+      width: 100%;
+      background: map-get($grays, 'dark');
+      top: $navbar-height;
+      @extend %duk-nav--vertical;
+    }
+
+    .menu-item {
+      display: block;
+    }
   }
 }

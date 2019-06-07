@@ -10,7 +10,7 @@
   }
 }
 
-.views-element-container {
+.node--type-home-page .views-element-container {
   &:nth-of-type(odd) {
     background: map-get($grays, 'light');
   }

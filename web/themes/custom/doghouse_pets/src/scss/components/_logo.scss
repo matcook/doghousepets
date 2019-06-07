@@ -16,14 +16,21 @@
   }
 }
 
+
 #site-branding {
   @extend %site-branding;
+  background: map-get($grays, 'dark');
+  width: 50%;
+  position: relative;
+  z-index: 20;
 
   #logo a {
     padding: 0;
 
+
     img {
       @extend %site-branding--logo;
+
     }
   }
 

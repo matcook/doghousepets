@@ -41,9 +41,13 @@
 
 .menu--main {
   @extend %main-nav;
+  z-index: 10;
 
   .menu {
     @extend %main-nav__menu;
+    position: fixed;
+    transition: transform 0.5s;
+    transform: translateY(-400px);
   }
 
   .menu-item {
@@ -65,6 +69,10 @@
     top: 0;
     right: 0;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @include duk-breakpoint('small') {
       display: none;
     }
@@ -73,14 +81,14 @@
   &.responsive {
     float: none;
     position: relative;
-    z-index: 10;
 
     .menu {
+      @extend %duk-nav--vertical;
       position: absolute;
       width: 100%;
       background: map-get($grays, 'dark');
       top: $navbar-height;
-      @extend %duk-nav--vertical;
+      transform: translateY(0);
     }
 
     .menu-item {

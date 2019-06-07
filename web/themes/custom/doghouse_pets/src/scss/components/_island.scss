@@ -14,11 +14,7 @@
   }
 }
 
-.node--type-home-page .views-element-container {
-  &:nth-of-type(odd) {
-    background: map-get($grays, 'light');
-  }
-
+.views-element-container {
   &>div {
     @extend %island;
   }
@@ -34,5 +30,11 @@
 
   .views-display-link {
     @extend %island__button;
+  }
+}
+
+.node--type-home-page .views-element-container {
+  &:nth-of-type(odd) {
+    background: map-get($grays, 'light');
   }
 }

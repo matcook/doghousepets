@@ -19,11 +19,11 @@
 %main-nav {
   float: right;
 
-  &--menu {
+  &__menu {
     @extend %duk-nav--horizontal;
   }
 
-  &--item {
+  &__item {
     color: map-get($grays, 'medium');
     text-decoration: none;
     line-height: $navbar-height;
@@ -43,7 +43,7 @@
   @extend %main-nav;
 
   .menu {
-    @extend %main-nav--menu;
+    @extend %main-nav__menu;
   }
 
   .menu-item {
@@ -54,12 +54,12 @@
     }
 
     a {
-      @extend %main-nav--item;
+      @extend %main-nav__item;
     }
   }
 
   .hamburger {
-    @extend %main-nav--item;
+    @extend %main-nav__item;
     @extend .duk-icon-navicon;
     position: absolute;
     top: 0;

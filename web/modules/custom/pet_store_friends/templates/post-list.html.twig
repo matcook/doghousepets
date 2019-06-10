@@ -6,4 +6,9 @@
       <div>{{ post.body }}</div>
     </div>
   {% endfor %}
+  {% if posts|length == 1 %}
+  <div class="duk-text-align-center">
+    <a href="/friends-articles" class="button button--secondary">See More</a>  
+  </div>
+  {% endif %}
 </div>

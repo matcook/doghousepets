@@ -7,6 +7,9 @@
 namespace Drupal\pet_store_friends\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\pet_store_friends\FriendsBlog;
 
 /**
  * Provides block displaying 1 post from external API
@@ -18,16 +21,48 @@ use Drupal\Core\Block\BlockBase;
  * )
  */
 
- class PetStoreFriends extends BlockBase {
+ class PetStoreFriends extends BlockBase implements ContainerFactoryPluginInterface{
+
+  /**
+   *  @var \Drupal\pet_store_friends\FriendsBlog
+  */
+   private $helper;
+   
+  /**
+   * @param array $configuration
+   * @param string $plugin_id
+   * @param mixed $plugin_definition
+   * @param \Drupal\pet_store_friends\FriendsBlog $helper
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, FriendsBlog $helper) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->helper = $helper;
+  }
+
+  /**
+   * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+   * @param array $configuration
+   * @param string $plugin_id
+   * @param mixed $plugin_definition
+   *
+   * @return static
+   */
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('pet_store_friends.postHelper')
+    );
+  }
 
   /**
    * {@inheritdoc}
   */
    public function build() {
-    $helper = \Drupal::service('pet_store_friends.postHelper');
     return [
       '#theme' => 'post_list',
-      '#posts' => $helper->setNumberOfPosts(1)->getPosts(),
+      '#posts' => $this->helper->setNumberOfPosts(1)->getPosts(),
       '#title' => 'Friends Pet Blog'
     ];
    }

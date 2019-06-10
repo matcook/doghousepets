@@ -45,9 +45,7 @@
 
   .menu {
     @extend %main-nav__menu;
-    position: fixed;
-    transition: transform 0.5s;
-    transform: translateY(-400px);
+    position: relative;
   }
 
   .menu-item {
@@ -78,7 +76,7 @@
     }
   }
 
-  &.responsive {
+  &.is-open {
     float: none;
     position: relative;
 

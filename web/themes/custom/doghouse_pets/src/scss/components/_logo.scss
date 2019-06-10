@@ -24,6 +24,10 @@
   position: relative;
   z-index: 20;
 
+  @include duk-breakpoint('small') {
+    width: auto;
+  }
+
   #logo a {
     padding: 0;
 

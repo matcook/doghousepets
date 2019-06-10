@@ -25,3 +25,4 @@
 
 /web/themes/custom/*/node_modules/
 /web/themes/custom/*/dist/css/*
+/web/themes/custom/*/dist/js/*

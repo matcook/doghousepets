@@ -19,11 +19,11 @@
 %main-nav {
   float: right;
 
-  &--menu {
+  &__menu {
     @extend %duk-nav--horizontal;
   }
 
-  &--item {
+  &__item {
     color: map-get($grays, 'medium');
     text-decoration: none;
     line-height: $navbar-height;
@@ -41,12 +41,56 @@
 
 .menu--main {
   @extend %main-nav;
+  z-index: 10;
 
   .menu {
-    @extend %main-nav--menu;
+    @extend %main-nav__menu;
+    position: relative;
   }
 
-  .menu-item a {
-    @extend %main-nav--item;
+  .menu-item {
+    display: none;
+
+    @include duk-breakpoint('small') {
+      display: block;
+    }
+
+    a {
+      @extend %main-nav__item;
+    }
+  }
+
+  .hamburger {
+    @extend %main-nav__item;
+    @extend .duk-icon-navicon;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include duk-breakpoint('small') {
+      display: none;
+    }
+  }
+
+  &.is-open {
+    float: none;
+    position: relative;
+
+    .menu {
+      @extend %duk-nav--vertical;
+      position: absolute;
+      width: 100%;
+      background: map-get($grays, 'dark');
+      top: $navbar-height;
+      transform: translateY(0);
+    }
+
+    .menu-item {
+      display: block;
+    }
   }
 }

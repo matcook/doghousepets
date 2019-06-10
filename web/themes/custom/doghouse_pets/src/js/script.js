@@ -1,10 +1,14 @@
-(function ($) {
+(function ($, Drupal) {
 
   "use strict";
 
-  Drupal.behaviors.customBehavior = {
-    // perform jQuery as normal in here
-
+  Drupal.behaviors.toggleMenu = {
+    attach: function (context, settings) {
+      $('.js-menu--main', context).append('<div><i class="hamburger"></i></div>');
+      $('.hamburger', context).click(function () {
+        $('.js-menu--main', context).toggleClass('is-open');
+      });
+    }
   };
 
-})(jQuery);
+})(jQuery, Drupal);

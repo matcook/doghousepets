@@ -16,14 +16,25 @@
   }
 }
 
+
 #site-branding {
   @extend %site-branding;
+  background: map-get($grays, 'dark');
+  width: 50%;
+  position: relative;
+  z-index: 20;
+
+  @include duk-breakpoint('small') {
+    width: auto;
+  }
 
   #logo a {
     padding: 0;
 
+
     img {
       @extend %site-branding--logo;
+
     }
   }
 

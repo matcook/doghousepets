@@ -4,3 +4,12 @@
  * @file
  * Functions to support theming in the theme.
  */
+
+/**
+* Implements hook_preprocess_HOOK() for menu.html.twig.
+*/
+function doghouse_pets_preprocess_menu(&$variables) {
+  if ($variables['menu_name'] == 'main') {
+    $variables['attributes']['class'][] = 'js-menu--main';  
+  }
+}

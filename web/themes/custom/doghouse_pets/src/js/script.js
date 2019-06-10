@@ -4,9 +4,9 @@
 
   Drupal.behaviors.toggleMenu = {
     attach: function (context, settings) {
-      $('.menu--main', context).append('<div><i class="hamburger"></i></div>');
+      $('.js-menu--main', context).append('<div><i class="hamburger"></i></div>');
       $('.hamburger', context).click(function () {
-        $('.menu--main', context).toggleClass('is-open');
+        $('.js-menu--main', context).toggleClass('is-open');
       });
     }
   };

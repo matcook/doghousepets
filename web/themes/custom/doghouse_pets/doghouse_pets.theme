@@ -10,9 +10,6 @@
 */
 function doghouse_pets_preprocess_menu(&$variables) {
   if ($variables['menu_name'] == 'main') {
-    if (!isset($variables['attributes']['class'])) {
-      $variables['attributes']['class'] = [];
-    }
     $variables['attributes']['class'][] = 'js-menu--main';  
   }
 }

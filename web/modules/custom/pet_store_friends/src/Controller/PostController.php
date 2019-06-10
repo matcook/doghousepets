@@ -10,16 +10,27 @@ class PostController extends ControllerBase{
 
 
   /**
-   *  @var \Drupal\pet_store_friends\FriendsBlog
+  *  @var \Drupal\pet_store_friends\FriendsBlog
   */
   private $helper;
   
-    /**
-   * @param \Drupal\pet_store_friends\FriendsBlog $helper
-   */
+  /**
+  * @param \Drupal\pet_store_friends\FriendsBlog $helper
+  */
   public function __construct(FriendsBlog $helper){
     $this->helper = $helper;
   } 
+
+  /**
+  * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
+  *
+  * @return static
+  */
+  public static function create(ContainerInterface $container){
+    return new static(
+      $container->get('pet_store_friends.postHelper')
+    );
+  }
 
   public function getPosts(){
     return [
@@ -27,16 +38,5 @@ class PostController extends ControllerBase{
       '#posts' => $this->helper->getPosts(),
       '#title' => 'Friends Pet Blog'
     ];
-  }
-
-    /**
-   * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
-   *
-   * @return static
-   */
-  public static function create(ContainerInterface $container){
-    return new static(
-      $container->get('pet_store_friends.postHelper')
-    );
   }
 }

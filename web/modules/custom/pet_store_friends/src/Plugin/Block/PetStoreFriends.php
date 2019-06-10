@@ -27,6 +27,17 @@ use Drupal\pet_store_friends\FriendsBlog;
    *  @var \Drupal\pet_store_friends\FriendsBlog
   */
    private $helper;
+   
+  /**
+   * @param array $configuration
+   * @param string $plugin_id
+   * @param mixed $plugin_definition
+   * @param \Drupal\pet_store_friends\FriendsBlog $helper
+   */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, FriendsBlog $helper) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->helper = $helper;
+  }
 
   /**
    * @param \Symfony\Component\DependencyInjection\ContainerInterface $container
@@ -43,17 +54,6 @@ use Drupal\pet_store_friends\FriendsBlog;
       $plugin_definition,
       $container->get('pet_store_friends.postHelper')
     );
-  }
-
-  /**
-   * @param array $configuration
-   * @param string $plugin_id
-   * @param mixed $plugin_definition
-   * @param \Drupal\pet_store_friends\FriendsBlog $helper
-   */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, FriendsBlog $helper) {
-    parent::__construct($configuration, $plugin_id, $plugin_definition);
-    $this->helper = $helper;
   }
 
   /**

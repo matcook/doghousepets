@@ -26,7 +26,7 @@ use Drupal\pet_store_friends\FriendsBlog;
   /**
    *  @var \Drupal\pet_store_friends\FriendsBlog
   */
-   private $helper;
+   protected $helper;
    
   /**
    * @param array $configuration
@@ -34,7 +34,12 @@ use Drupal\pet_store_friends\FriendsBlog;
    * @param mixed $plugin_definition
    * @param \Drupal\pet_store_friends\FriendsBlog $helper
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, FriendsBlog $helper) {
+  public function __construct(
+    array $configuration, 
+    $plugin_id, 
+    $plugin_definition, 
+    FriendsBlog $helper
+  ) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->helper = $helper;
   }
@@ -47,7 +52,12 @@ use Drupal\pet_store_friends\FriendsBlog;
    *
    * @return static
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+  public static function create(
+    ContainerInterface $container, 
+    array $configuration, 
+    $plugin_id, 
+    $plugin_definition
+  ) {
     return new static(
       $configuration,
       $plugin_id,
@@ -59,14 +69,18 @@ use Drupal\pet_store_friends\FriendsBlog;
   /**
    * {@inheritdoc}
   */
-   public function build() {
+  public function build() {
     return [
-      '#theme' => 'post_list',
-      '#posts' => $this->helper
-                    ->randomPost()
-                    ->setNumberOfPosts(1)
-                    ->getPosts(),
-      '#title' => 'Friends Pet Blog'
+      '#lazy_builder' => [
+        static::class . '::getPost',
+        []
+      ],'#create_placeholder' => TRUE,
     ];
    }
+
+  public static function getPost() {
+    return ['#theme' => 'post_list',
+            '#posts' => \Drupal::service('pet_store_friends.postHelper')->randomPost()->setNumberOfPosts(1)->getPosts(),
+            '#title' => 'Friends Pet Blog'];
+  }
  }

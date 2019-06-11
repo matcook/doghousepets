@@ -32,9 +32,10 @@ class PostBuilder {
     return [
       '#theme' => 'post_list',
       '#posts' => $this->helper
-                    ->randomPost()
-                    ->setNumberOfPosts(1)
-                    ->getPosts(),
-      '#title' => 'Friends Pet Blog'];
+        ->randomPost()
+        ->setNumberOfPosts(1)
+        ->getPosts(),
+      '#title' => 'Friends Pet Blog'
+    ];
   }
 }

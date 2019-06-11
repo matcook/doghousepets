@@ -2,14 +2,13 @@
   <h2 class="island__heading">{{ title }}</h2>
   {% for post in posts %}
     <div class="duk-island--tertiary duk-mb--1 duk-mr--1 duk-ml--1">
-      <img src="{{ post.image_url }}"/>
+      <img src="{{ post.image_url }}" alt ="Image for {{ post.title }}"/>
       <h4>{{ post.title }}</h4>
       <div>{{ post.body }}</div>
     </div>
   {% endfor %}
   {% if posts|length == 1 %}
   <div class="duk-text-align-center">
-  
     <a href="{{ url('pet_store_friends.post_list') }}" class="button button--secondary">See More</a>  
   </div>
   {% endif %}

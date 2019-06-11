@@ -27,6 +27,13 @@ class FriendsBlog {
    */
   protected $posts;
 
+    /** 
+   * @var number
+   * 
+   *  The ID of the first post to display 
+   */
+  protected $postID = 0;
+
   /** 
    * @var number
    * 
@@ -51,6 +58,17 @@ class FriendsBlog {
     $this->httpclient = $http_client;
   }
 
+    /**
+   * Sets the first postID to be a random number between the first and last post
+   * 
+   * @return \Drupal\pet_store_friends\FriendsBlog
+   */
+  
+  public function randomPost() {
+    $this->postID = rand($this->postID, $this->numberOfPosts);
+    return $this;
+  }
+
   /**
    * Sets number of posts to be displayed
    * 
@@ -70,7 +88,7 @@ class FriendsBlog {
   public function getPosts() {
     $this->data = $this->httpclient->get($this->url)->getBody();
     $this->posts = json_decode($this->data);
-    $this->posts = array_slice($this->posts, 0, $this->numberOfPosts);
+    $this->posts = array_slice($this->posts, $this->postID, $this->numberOfPosts);
     return $this->posts;
   }
 }

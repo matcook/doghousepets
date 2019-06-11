@@ -62,7 +62,10 @@ use Drupal\pet_store_friends\FriendsBlog;
    public function build() {
     return [
       '#theme' => 'post_list',
-      '#posts' => $this->helper->setNumberOfPosts(1)->getPosts(),
+      '#posts' => $this->helper
+                    ->randomPost()
+                    ->setNumberOfPosts(1)
+                    ->getPosts(),
       '#title' => 'Friends Pet Blog'
     ];
    }

@@ -72,15 +72,9 @@ use Drupal\pet_store_friends\FriendsBlog;
   public function build() {
     return [
       '#lazy_builder' => [
-        static::class . '::getPost',
+        'pet_store_friends.builder:buildSinglePost',
         []
       ],'#create_placeholder' => TRUE,
     ];
    }
-
-  public static function getPost() {
-    return ['#theme' => 'post_list',
-            '#posts' => \Drupal::service('pet_store_friends.postHelper')->randomPost()->setNumberOfPosts(1)->getPosts(),
-            '#title' => 'Friends Pet Blog'];
-  }
  }

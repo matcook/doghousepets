@@ -2,6 +2,6 @@ services:
   pet_store_friends.postHelper:
     class: Drupal\pet_store_friends\FriendsBlog
     arguments: ["@http_client"]
-  # pet_store_friends.builder:
-  #   class: Drupal\pet_store_friends\foo
-  #   arguments: ["@pet_store_friends.postHelper"]
+  pet_store_friends.builder:
+    class: Drupal\pet_store_friends\PostBuilder
+    arguments: ["@pet_store_friends.postHelper"]

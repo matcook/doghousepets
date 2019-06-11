@@ -58,12 +58,11 @@ class FriendsBlog {
     $this->httpclient = $http_client;
   }
 
-    /**
+  /**
    * Sets the first postID to be a random number between the first and last post
    * 
    * @return \Drupal\pet_store_friends\FriendsBlog
    */
-  
   public function randomPost() {
     $this->postID = rand($this->postID, $this->numberOfPosts);
     return $this;
@@ -74,7 +73,6 @@ class FriendsBlog {
    * 
    * @return \Drupal\pet_store_friends\FriendsBlog
    */
-  
   public function setNumberOfPosts($number) {
     $this->numberOfPosts = $number;
     return $this;

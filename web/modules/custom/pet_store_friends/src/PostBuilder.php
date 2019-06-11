@@ -6,12 +6,12 @@ use Drupal\pet_store_friends\FriendsBlog;
 
 class PostBuilder {
 
+
   /**
    * instance of FriendsBlog class
    * 
    *  @var Drupal\pet_store_friends\FriendsBlog 
    */
-
   protected $helper;
 
   /**

@@ -96,7 +96,13 @@ class FriendsBlog {
     $this->photos =json_decode($this->httpclient->get($this->imgUrl)->getBody());
     
     foreach($this->posts as $post){
-      $post->image_url = $this->photos[$post->id]->url;
+      if(sizeof($this->photos) > sizeof($this->posts)){
+        $post->thumbnail_url = $this->photos[$post->id]->thumbnailUrl;
+        $post->image_url = $this->photos[$post->id]->url;
+      } else {
+        $post->thumbnail_url = "https://via.placeholder.com/150";
+        $post->image_url =  "https://via.placeholder.com/600";
+      }
     }
 
     $this->posts = array_slice($this->posts, $this->postID, $this->numberOfPosts);

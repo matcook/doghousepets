@@ -96,7 +96,7 @@ class FriendsBlog {
     $this->photos =json_decode($this->httpclient->get($this->imgUrl)->getBody());
     
     foreach($this->posts as $post){
-      if(sizeof($this->photos) > sizeof($this->posts)){
+      if(array_key_exists($post->id, $this->photos)){
         $post->thumbnail_url = $this->photos[$post->id]->thumbnailUrl;
         $post->image_url = $this->photos[$post->id]->url;
       } else {

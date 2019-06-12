@@ -7,25 +7,33 @@ class FriendsBlog {
 
   
   /**
-   * The url to fetch data from. 
+   * The url to fetch post data from. 
    * 
    *  @var string 
   */
-  protected $url = 'https://jsonplaceholder.typicode.com/posts';
+  protected $postUrl = 'https://jsonplaceholder.typicode.com/posts';
 
-  /** 
-   * The JSON data from the API.
+    /**
+   * The url to fetch image data from. 
    * 
-   * @var string 
-   */
-  protected $data;
+   *  @var string 
+  */
+  protected $imgUrl = 'https://jsonplaceholder.typicode.com/photos';
 
   /**
-   * The data from the API. 
+   * The post data from the API. 
    * 
    *  @var array|object 
    */
   protected $posts;
+
+  /**
+   * The image data from the API. 
+   * 
+   *  @var array|object 
+   */
+  protected $photos;
+
 
     /** 
    * @var number
@@ -58,12 +66,11 @@ class FriendsBlog {
     $this->httpclient = $http_client;
   }
 
-    /**
+  /**
    * Sets the first postID to be a random number between the first and last post
    * 
    * @return \Drupal\pet_store_friends\FriendsBlog
    */
-  
   public function randomPost() {
     $this->postID = rand($this->postID, $this->numberOfPosts);
     return $this;
@@ -74,7 +81,6 @@ class FriendsBlog {
    * 
    * @return \Drupal\pet_store_friends\FriendsBlog
    */
-  
   public function setNumberOfPosts($number) {
     $this->numberOfPosts = $number;
     return $this;
@@ -86,8 +92,19 @@ class FriendsBlog {
    * @return array
    */
   public function getPosts() {
-    $this->data = $this->httpclient->get($this->url)->getBody();
-    $this->posts = json_decode($this->data);
+    $this->posts = json_decode($this->httpclient->get($this->postUrl)->getBody());
+    $this->photos =json_decode($this->httpclient->get($this->imgUrl)->getBody());
+    
+    foreach($this->posts as $post){
+      if(array_key_exists($post->id, $this->photos)){
+        $post->thumbnail_url = $this->photos[$post->id]->thumbnailUrl;
+        $post->image_url = $this->photos[$post->id]->url;
+      } else {
+        $post->thumbnail_url = "https://via.placeholder.com/150";
+        $post->image_url =  "https://via.placeholder.com/600";
+      }
+    }
+
     $this->posts = array_slice($this->posts, $this->postID, $this->numberOfPosts);
     return $this->posts;
   }

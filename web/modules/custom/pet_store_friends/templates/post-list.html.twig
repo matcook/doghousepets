@@ -1,15 +1,24 @@
 <div class="island">
   <h2 class="island__heading">{{ title }}</h2>
-  {% for post in posts %}
-    <div class="duk-island--tertiary duk-mb--1 duk-mr--1 duk-ml--1">
-      <img src="{{ post.thumbnail_url }}" alt ="Image for {{ post.title }}"/>
-      <h4>{{ post.title }}</h4>
-      <div>{{ post.body }}</div>
-    </div>
-  {% endfor %}
-  {% if posts|length == 1 %}
-  <div class="duk-text-align-center">
-    <a href="{{ url('pet_store_friends.post_list') }}" class="button button--secondary">See More</a>  
-  </div>
+  {% if posts|length > 1 %}
+    {% for post in posts %}
+      <div class="duk-island--tertiary duk-mb--1 duk-mr--1 duk-ml--1">
+        <img src="{{ post.thumbnail_url }}" alt ="Image for {{ post.title }}"/>
+        <h4>{{ post.title }}</h4>
+        <div>{{ post.body }}</div>
+      </div>
+    {% endfor %}
   {% endif %}
+
+  {% if posts|length == 1 %}
+    <img src="{{ posts[0].image_url }}" alt ="Image for {{ posts[0].title }}"/>
+    <div class="duk-island--tertiary duk-mb--1 duk-mr--1 duk-ml--1">
+      <h4>{{ posts[0].title }}</h4>
+      <div>{{ posts[0].body }}</div>
+    </div>
+    <div class="duk-text-align-center">
+      <a href="{{ url('pet_store_friends.post_list') }}" class="button button--secondary">See More</a>  
+    </div>
+  {% endif %}
+
 </div>

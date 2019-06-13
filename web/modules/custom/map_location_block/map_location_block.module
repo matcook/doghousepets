@@ -1,0 +1,26 @@
+<?php
+
+/**
+* Implements hook_theme().
+*/
+function map_location_block_theme($existing, $type, $theme, $path) {
+  return [
+    'map_location_block' => [
+      'variables' => ['keys' => []]
+    ]
+  ];
+}
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function styled_google_map_library_info_alter(&$libraries, $extension) {
+  if ($extension == 'map_location_block' && isset($libraries['google_map_api'])) {
+    if (!empty($libraries['google_map_api']['js']['//maps.google.com/maps/api/js'])) {
+      $options = $libraries['google_map_api']['js']['//maps.google.com/maps/api/js'];
+      unset($libraries['google_map_api']['js']['//maps.google.com/maps/api/js']);
+      $api_url = '?key=' . $_ENV['GOOGLE_API_KEY'];
+      $libraries['google_map_api']['js']['//maps.google.com/maps/api/js' . $api_url] = $options;
+    }
+  }
+}

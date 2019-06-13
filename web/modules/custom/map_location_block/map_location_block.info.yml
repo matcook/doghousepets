@@ -1,0 +1,4 @@
+name: Map Location Block
+description: Displays location on map in a block using google maps api
+type: module
+core: 8.x

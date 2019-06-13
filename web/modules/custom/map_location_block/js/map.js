@@ -8,7 +8,9 @@
   'use strict';
   Drupal.behaviors.initMap = {
     attach: function (context, settings) {
-      function generateMap() {
+      $('.map-container', context).once('generateMap').each(function () {
+        console.log('latitude ' + drupalSettings.map_location_block.latitude);
+        console.log('longitude ' + drupalSettings.map_location_block.longitude);
         var location = {
           lat: parseFloat(drupalSettings.map_location_block.latitude),
           lng: parseFloat(drupalSettings.map_location_block.longitude)
@@ -22,9 +24,7 @@
           map: map,
           title: 'Doghouse Pets'
         });
-      }
-      generateMap();
-      console.log('ran')
+      });
     }
   }
 })(jQuery, Drupal, drupalSettings);

@@ -31,7 +31,6 @@ use Drupal\Core\Block\BlockBase;
     $build['#attached']['drupalSettings']['map_location_block']['latitude'] = $config->get('latitude');
     $build['#attached']['drupalSettings']['map_location_block']['longitude'] = $config->get('longitude');
     $build["#theme"] = 'map_location_block';
-    $build['#keys'] = $_ENV['GOOGLE_API_KEY'];
 
     return $build;
    }

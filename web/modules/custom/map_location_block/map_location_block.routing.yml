@@ -1,7 +1,7 @@
-map_location_block.admin_settings_form:  
-  path: '/admin/config/system/mapsettings'  
-  defaults:  
-    _form: '\Drupal\map_location_block\Form\mapLocationBlockSettingsForm'  
-    _title: 'Map Location Settings'  
-  requirements:  
+map_location_block.admin_settings_form:
+  path: '/admin/config/system/mapsettings'
+  defaults:
+    _form: '\Drupal\map_location_block\Form\MapLocationBlockSettingsForm'
+    _title: 'Map Location Settings'
+  requirements:
     _permission: 'alter map location'

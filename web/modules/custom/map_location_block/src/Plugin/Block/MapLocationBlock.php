@@ -1,29 +1,23 @@
 <?php
-/**
- *  @file
- *  Map Location using Google API
- */
 
 namespace Drupal\map_location_block\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 
-
 /**
- * Provides block displaying 1 post from external API
- * 
+ * Provides block displaying map location.
+ *
  * @Block(
  *  id = "map_location_block",
  *  admin_label = @Translation("Map Location Block"),
  *  category = @Translation("Blocks")
  * )
  */
-
- class MapLocationBlock extends BlockBase{
+class MapLocationBlock extends BlockBase {
 
   /**
    * {@inheritdoc}
-  */
+   */
   public function build() {
     $config = \Drupal::config('map_location_block.adminsettings');
     return [
@@ -34,9 +28,10 @@ use Drupal\Core\Block\BlockBase;
           'mapLocationBlock' => [
             'latitude' => $config->get('latitude'),
             'longitude' => $config->get('longitude'),
-          ]
-        ]
-      ]
+          ],
+        ],
+      ],
     ];
-   }
- }
+  }
+
+}

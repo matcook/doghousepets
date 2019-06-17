@@ -31,7 +31,7 @@ use Drupal\Core\Block\BlockBase;
       '#attached' => [
         'library' => 'map_location_block/map_block_js',
         'drupalSettings' => [
-          'map_location_block' => [
+          'mapLocationBlock' => [
             'latitude' => $config->get('latitude'),
             'longitude' => $config->get('longitude'),
           ]

@@ -11,8 +11,8 @@
       $('#map-container', context).once('generateMap')
         .each(function () {
           var location = {
-            lat: parseFloat(drupalSettings.map_location_block.latitude),
-            lng: parseFloat(drupalSettings.map_location_block.longitude),
+            lat: parseFloat(drupalSettings.mapLocationBlock.latitude),
+            lng: parseFloat(drupalSettings.mapLocationBlock.longitude),
           };
           var map = new google.maps.Map(document.getElementById('map'), {
             center: location,

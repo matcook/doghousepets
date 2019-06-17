@@ -26,12 +26,17 @@ use Drupal\Core\Block\BlockBase;
   */
   public function build() {
     $config = \Drupal::config('map_location_block.adminsettings');
-    $build = [];
-    $build['#attached']['library'] = 'map_location_block/map_block_js';
-    $build['#attached']['drupalSettings']['map_location_block']['latitude'] = $config->get('latitude');
-    $build['#attached']['drupalSettings']['map_location_block']['longitude'] = $config->get('longitude');
-    $build["#theme"] = 'map_location_block';
-
-    return $build;
+    return [
+      '#theme' => 'map_location_block',
+      '#attached' => [
+        'library' => 'map_location_block/map_block_js',
+        'drupalSettings' => [
+          'map_location_block' => [
+            'latitude' => $config->get('latitude'),
+            'longitude' => $config->get('longitude'),
+          ]
+        ]
+      ]
+    ];
    }
  }

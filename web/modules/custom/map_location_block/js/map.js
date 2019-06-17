@@ -8,21 +8,22 @@
   'use strict';
   Drupal.behaviors.initMap = {
     attach: function (context, settings) {
-      $('.map-container', context).once('generateMap').each(function () {
-        var location = {
-          lat: parseFloat(drupalSettings.map_location_block.latitude),
-          lng: parseFloat(drupalSettings.map_location_block.longitude)
-        };
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: location,
-          zoom: 16
+      $('#map-container', context).once('generateMap')
+        .each(function () {
+          var location = {
+            lat: parseFloat(drupalSettings.map_location_block.latitude),
+            lng: parseFloat(drupalSettings.map_location_block.longitude),
+          };
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: location,
+            zoom: 16,
+          });
+          var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            title: 'Doghouse Pets',
+          });
         });
-        var marker = new google.maps.Marker({
-          position: location,
-          map: map,
-          title: 'Doghouse Pets'
-        });
-      });
     }
   }
 })(jQuery, Drupal, drupalSettings);

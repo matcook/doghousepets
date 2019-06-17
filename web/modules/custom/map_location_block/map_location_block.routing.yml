@@ -4,4 +4,4 @@ map_location_block.admin_settings_form:
     _form: '\Drupal\map_location_block\Form\mapLocationBlockSettingsForm'  
     _title: 'Map Location Settings'  
   requirements:  
-    _permission: 'access administration pages'
+    _permission: 'alter map location'

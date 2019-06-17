@@ -1,0 +1,4 @@
+alter map location:
+  title: 'Alter Map Marker Location'
+  description: 'Change the latitude and longitude of map marker'
+  restrict access: TRUE

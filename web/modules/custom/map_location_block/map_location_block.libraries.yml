@@ -1,7 +1,3 @@
-google_map_api:
-  js:
-    //maps.google.com/maps/api/js: { type: external }
-
 map_block_js:
   js:
     js/map.js: {}

@@ -45,8 +45,14 @@ class MapLocationBlock extends BlockBase implements ContainerFactoryPluginInterf
    */
   public function build() {
     return [
-      '#type' => 'inline_template',
-      '#template' => '<div id="map-container"><div id="map" style="height:500px"></div></div>',
+      'children' => [
+        '#type' => 'html_tag',
+        '#tag' => 'div',
+        '#attributes' => [
+          'id' => 'map',
+          'style' => 'height:500px;',
+        ],
+      ],
       '#attached' => [
         'library' => 'map_location_block/map_block_js',
         'drupalSettings' => [

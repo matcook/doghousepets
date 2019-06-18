@@ -8,7 +8,8 @@
   'use strict';
   Drupal.behaviors.initMap = {
     attach: function (context, settings) {
-      $('#map-container', context).once('generateMap')
+      $('#map', context).parent()
+        .once('generateMap')
         .each(function () {
           var location = {
             lat: parseFloat(drupalSettings.mapLocationBlock.latitude),

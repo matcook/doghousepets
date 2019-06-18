@@ -6,15 +6,6 @@
  */
 
 /**
- * Implements hook_theme().
- */
-function map_location_block_theme($existing, $type, $theme, $path) {
-  return [
-    'map_location_block' => [],
-  ];
-}
-
-/**
  * Implements hook_library_info_build().
  */
 function map_location_block_library_info_build() {

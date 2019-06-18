@@ -1,6 +1,6 @@
 /**
  * @file
- * 
+ *
  * Contains JS functions
  */
 

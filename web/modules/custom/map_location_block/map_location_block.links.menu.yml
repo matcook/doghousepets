@@ -1,0 +1,5 @@
+map_location_block.admin_settings_form:
+  title: 'Map location configuration'
+  parent: system.admin_config_system
+  description: 'Configure latitude and longitude for map marker on contact page'
+  route_name: map_location_block.admin_settings_form

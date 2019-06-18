@@ -1,0 +1,28 @@
+uuid: 4dc3b63b-f757-47eb-a942-48e04aa0e08f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_visibility_groups.block_visibility_group.contact_page
+  module:
+    - block_visibility_groups
+    - map_location_block
+  theme:
+    - doghouse_pets
+id: maplocationblock
+theme: doghouse_pets
+region: content
+weight: 0
+provider: null
+plugin: map_location_block
+settings:
+  id: map_location_block
+  label: 'Our Location'
+  provider: map_location_block
+  label_display: visible
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: contact_page
+    context_mapping: {  }

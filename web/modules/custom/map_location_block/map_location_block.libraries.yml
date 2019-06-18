@@ -1,0 +1,8 @@
+map_block_js:
+  js:
+    js/map.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupalSettings
+    - map_location_block/google_map_api
